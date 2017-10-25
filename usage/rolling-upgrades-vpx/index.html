@@ -1,0 +1,715 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for Citrix NetScaler Ansible 0.1">
+      
+      
+      
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.1, mkdocs-material-1.4.1">
+    
+    
+      
+        <title>Rolling upgrades (VPX) - Citrix NetScaler Ansible Docs</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-76741b64bc.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body>
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="../.." title="Citrix NetScaler Ansible Docs" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  User Documentation
+                </span>
+              
+            
+            Rolling upgrades (VPX)
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
+    Citrix NetScaler Ansible Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="NetScaler Ansible Docs" class="md-nav__link">
+      NetScaler Ansible Docs
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      User Documentation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        User Documentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../getting-started/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../speeding-up-execution/" title="Speeding up execution" class="md-nav__link">
+      Speeding up execution
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../rolling-upgrades/" title="Rolling upgrades" class="md-nav__link">
+      Rolling upgrades
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Rolling upgrades (VPX)
+      </label>
+    
+    <a href="./" title="Rolling upgrades (VPX)" class="md-nav__link md-nav__link--active">
+      Rolling upgrades (VPX)
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setup" title="Setup" class="md-nav__link">
+    Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initializing-the-testbed" title="Initializing the testbed" class="md-nav__link">
+    Initializing the testbed
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upgrade-process" title="Upgrade process" class="md-nav__link">
+    Upgrade process
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" title="References" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../docker-image/" title="Netscaler ansible docker image" class="md-nav__link">
+      Netscaler ansible docker image
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Using Generic Ansible Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Using Generic Ansible Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../generic-modules/about/" title="Using generic Ansible modules" class="md-nav__link">
+      Using generic Ansible modules
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../generic-modules/templating-configuration-file/" title="Templating the configuration file" class="md-nav__link">
+      Templating the configuration file
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../generic-modules/nitro-api-calls/" title="Direct NITRO API calls" class="md-nav__link">
+      Direct NITRO API calls
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../development-utilities/" title="Developer Documentation" class="md-nav__link">
+      Developer Documentation
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setup" title="Setup" class="md-nav__link">
+    Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initializing-the-testbed" title="Initializing the testbed" class="md-nav__link">
+    Initializing the testbed
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upgrade-process" title="Upgrade process" class="md-nav__link">
+    Upgrade process
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" title="References" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="rolling-upgrades-vpx"><a class="toclink" href="#rolling-upgrades-vpx">Rolling upgrades (VPX)</a></h1>
+<p>This document demonstrates how to to a rolling upgrade with zero
+downtime for a simple load balanced service.</p>
+<p>The methods showcased here are also applicable to more complex
+networking setups.</p>
+<h2 id="setup"><a class="toclink" href="#setup">Setup</a></h2>
+<p>The example utilizes Netscaler VPX and some virtualized hosts to provide
+the back end web services.</p>
+<p>The ansible playbooks along with other files needed to run this example
+can be found at the following <a href="https://github.com/citrix/netscaler-rolling-updates-vpx-example">github
+repository</a></p>
+<p>The testbed required to run the examples is the following.</p>
+<div class="codehilite"><pre><span></span>    +--------------------+
+    | Netscaler VPX      |
+    |                    | 192.168.10.2                  +----------+
+    |               SNIP |&lt;-----------------------------&gt;| server 1 |
+    |                    |              |  192.168.10.10 +----------+
+    | NSIP          VIP  |              |                          ^
+    +--------------------+              |                          |10.78.60.204
+      ^              ^                  |            +----------+  |
+      |10.78.60.202  |10.78.60.203      +-----------&gt;| server 2 |  |
+      |              |                 192.168.10.11 +----------+  |
+      |              |                                       ^     |
+      |              |                           10.78.60.205|     |
+      |              |                                       |     |
+      |              |                                       |     |
+      |              |                                       |     |
+      |              |                                       |     |
+      |=NITRO        |=HTTP                                  |     |
+      |              |                                       |     |
+      |              |     +-----------+             SSH     |     |
+      +--------------+-----| user host |---------------------+-----+
+                           +-----------+
+</pre></div>
+
+
+<p>We need a virtual host to run Netscaler VPX and we also need two hosts
+to run the back end web services. These can be any kind of hosts, as
+long as it is possible for the Netscaler node and the web server nodes
+to communicate via a specified subnet. Having the backend servers as
+virtual hosts on the same Xen Server as the Netscaler VPX is recommended
+since it simplifies the networking setup needed.</p>
+<p>In our example the back end servers and the Netscaler host communicate
+via the <code>192.168.10.0/24</code> subnet.</p>
+<p>Also there is a user host which is the machine that will run the
+playbooks for this example. This host needs to be able to communicate
+via SSH with the back end servers to be able to setup and update the web
+services and also needs to be able to make NITRO API calls to the
+Netscaler node on the configured NSIP.</p>
+<p>Finally Netscaler needs to have a Virtual IP configured which will be
+the client facing address of our load balanced service.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+</div>
+<p>"Note
+        The playbooks and scripts do not configure any of these ip addresses on the Netscaler node or the server nodes. You need to set them up prior to running the playbooks in this example and modify the <code>inventory.txt</code> file to match your particular configuration.</p>
+<p>More details for the requirements of each node are included in the
+README file of the <a href="https://github.com/citrix/netscaler-rolling-updates-vpx-example">github
+repository</a>
+containing this example's files.</p>
+<h2 id="initializing-the-testbed"><a class="toclink" href="#initializing-the-testbed">Initializing the testbed</a></h2>
+<p>Having setup the testbed and modified the inventory.txt file to match
+the configured ip addresses we need to initialize the Netscaler and the
+back end server nodes.</p>
+<p>This is done by running on the user host from a fresh checkout of the
+files from the <a href="https://github.com/citrix/netscaler-rolling-updates-vpx-example">github
+repository</a>
+by running the following command</p>
+<div class="codehilite"><pre><span></span>ansible-playbook -i inventory.txt rolling_init.yaml
+</pre></div>
+
+
+<p>Running this playbook will initialize the back end services and also
+configure the Netscaler in order to serve them over the VIP of the load
+balancer.</p>
+<p>The logical configuration of the Netscaler node can be seen in the
+following diagram.</p>
+<div class="codehilite"><pre><span></span>          +
+          |
+          |
+          |
++---------V----------+
+| Load balancer      |
+| lb_vserver_1       |----------+
+| 10.78.60.203:80    |          |
++--------------------+          |
+        |                       |
+        |                       |
+        |                       |
++-------V-----+           +-----V-------+
+| Service 1   |           | Service 2   |
+| server_1    |           | server_2    |
+| port 80     |           | port 80     |
++-------------+           +-------------+
+        |                       |
+        |                       |
+        |                       |
++-------V-------+           +-----V---------+
+| server_1      |           | server_2      |
+| 192.168.10.10 |           | 192.168.10.11 |
++---------------+           +---------------+
+</pre></div>
+
+
+<p>In this setup the load balancer virtual server is configured with the
+ROUNDROBIN load balancing method and has 2 service members with 50%
+weight each.</p>
+<p>To check that the load balancer works correctly run the following
+command</p>
+<div class="codehilite"><pre><span></span>curl <span class="m">10</span>.78.60.203
+</pre></div>
+
+
+<p>You should see a <code>Hello webserver1</code>. Running the same command a second
+time should output <code>Hello webserver2</code>.</p>
+<h2 id="upgrade-process"><a class="toclink" href="#upgrade-process">Upgrade process</a></h2>
+<p>The upgrade playbook utilizes the <code>pre_tasks</code> and <code>post_tasks</code> hooks to
+bring the services down and back up during the update process.</p>
+<p>The upgrade playbook is the following:</p>
+<div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">hosts</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">service_hosts</span>
+  <span class="l l-Scalar l-Scalar-Plain">vars</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">compose_yaml</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">/var/tmp/docker-compose.yaml</span>
+
+  <span class="l l-Scalar l-Scalar-Plain">remote_user</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">root</span>
+  <span class="l l-Scalar l-Scalar-Plain">gather_facts</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+  <span class="l l-Scalar l-Scalar-Plain">serial</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+
+  <span class="l l-Scalar l-Scalar-Plain">pre_tasks</span><span class="p p-Indicator">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="s">&quot;Disable</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">servername</span><span class="nv"> </span><span class="s">}}&quot;</span>
+      <span class="l l-Scalar l-Scalar-Plain">delegate_to</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">localhost</span>
+      <span class="l l-Scalar l-Scalar-Plain">netscaler_server</span><span class="p p-Indicator">:</span>
+        <span class="l l-Scalar l-Scalar-Plain">nsip</span><span class="p p-Indicator">:</span> <span class="s">&quot;{{</span><span class="nv"> </span><span class="s">nsip</span><span class="nv"> </span><span class="s">}}&quot;</span>
+        <span class="l l-Scalar l-Scalar-Plain">nitro_user</span><span class="p p-Indicator">:</span> <span class="s">&quot;{{</span><span class="nv"> </span><span class="s">nitro_user</span><span class="nv"> </span><span class="s">}}&quot;</span>
+        <span class="l l-Scalar l-Scalar-Plain">nitro_pass</span><span class="p p-Indicator">:</span> <span class="s">&quot;{{</span><span class="nv"> </span><span class="s">nitro_pass</span><span class="nv"> </span><span class="s">}}&quot;</span>
+
+        <span class="l l-Scalar l-Scalar-Plain">disabled</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">yes</span>
+
+        <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="s">&quot;{{</span><span class="nv"> </span><span class="s">servername</span><span class="nv"> </span><span class="s">}}&quot;</span>
+
+  <span class="l l-Scalar l-Scalar-Plain">post_tasks</span><span class="p p-Indicator">:</span>
+
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="s">&quot;Re</span><span class="nv"> </span><span class="s">enable</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">servername</span><span class="nv"> </span><span class="s">}}&quot;</span>
+      <span class="l l-Scalar l-Scalar-Plain">delegate_to</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">localhost</span>
+      <span class="l l-Scalar l-Scalar-Plain">netscaler_server</span><span class="p p-Indicator">:</span>
+        <span class="l l-Scalar l-Scalar-Plain">nsip</span><span class="p p-Indicator">:</span> <span class="s">&quot;{{</span><span class="nv"> </span><span class="s">nsip</span><span class="nv"> </span><span class="s">}}&quot;</span>
+        <span class="l l-Scalar l-Scalar-Plain">nitro_user</span><span class="p p-Indicator">:</span> <span class="s">&quot;{{</span><span class="nv"> </span><span class="s">nitro_user</span><span class="nv"> </span><span class="s">}}&quot;</span>
+        <span class="l l-Scalar l-Scalar-Plain">nitro_pass</span><span class="p p-Indicator">:</span> <span class="s">&quot;{{</span><span class="nv"> </span><span class="s">nitro_pass</span><span class="nv"> </span><span class="s">}}&quot;</span>
+
+        <span class="l l-Scalar l-Scalar-Plain">disabled</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">no</span>
+        <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="s">&quot;{{</span><span class="nv"> </span><span class="s">servername</span><span class="nv"> </span><span class="s">}}&quot;</span>
+
+  <span class="l l-Scalar l-Scalar-Plain">tasks</span><span class="p p-Indicator">:</span>
+
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="s">&quot;Update</span><span class="nv"> </span><span class="s">backend</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">servername</span><span class="nv"> </span><span class="s">}}&quot;</span>
+      <span class="l l-Scalar l-Scalar-Plain">command</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">docker-compose -f &quot;{{ compose_yaml }}&quot; exec -d webserver bash -c &quot;echo &#39;hello updated {{ servername }}&#39; &gt; /app/content.txt&quot;</span>
+</pre></div>
+
+
+<p>The function of the pre_tasks and post_tasks hooks is documented by
+<a href="https://docs.ansible.com/ansible/playbooks_roles.html">ansible</a>.</p>
+<p>Essentially what we do is that we disable the server entity in Netscaler
+for each web service before the update process and after the update has
+taken place we re enable the server entity.</p>
+<p>The <code>serial: 1</code> option instructs ansible to operate on the webservers
+one at a time. This is a deviation from the default behavior of Ansible
+which is to operate on multiple nodes at once.</p>
+<p>In our example the update process is just a simple change of the content
+file on the web service docker container to verify the update has taken
+effect.</p>
+<p>To see how the update works you can run</p>
+<div class="codehilite"><pre><span></span>curl <span class="m">10</span>.78.60.203
+</pre></div>
+
+
+<p>during the update process and see how the output changes.</p>
+<p>Since the update itself is a relatively quick process you may not be
+able to see the rolling nature of the upgrade.</p>
+<p>For that you may want to run the update script in step mode</p>
+<div class="codehilite"><pre><span></span>ansible-playbook -i inventory.txt rolling_update.yml --step
+</pre></div>
+
+
+<p>and watch the output of</p>
+<div class="codehilite"><pre><span></span>curl <span class="m">10</span>.78.60.203
+</pre></div>
+
+
+<p>a number of times to actually see what happens.</p>
+<p>What you should see is each server taken out of the load balancing pool
+and then brought up without any service interruption.</p>
+<p>In our example the update of the web server is instantaneous we do not
+have any actual down time.</p>
+<p>In a real world situation the update would put the webserver in a state
+that would be unable to respond to requests.</p>
+<p>Had we not disabled the corresponding server, in this case, would mean
+that a number of requests would be directed to the offline server
+resulting in clients getting error responses.</p>
+<p>Eventually the monitors attached to the Netscaler services would take
+the disrupted service out of the load balancing pool but depending on
+the traffic volume several requests would have been affected by the non
+functioning service by that time.</p>
+<p>Disabling the server before the update process guarantees that Netscaler
+will not direct any traffic to it during that time, ensuring continuous
+delivery of the content.</p>
+<h2 id="references"><a class="toclink" href="#references">References</a></h2>
+<ul>
+<li><a href="https://github.com/citrix/netscaler-ansible-modules">Netscaler ansible modules repository</a></li>
+<li><a href="https://docs.ansible.com/ansible/index.html">Ansible documentation</a></li>
+</ul>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../rolling-upgrades/" title="Rolling upgrades" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Rolling upgrades
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../docker-image/" title="Netscaler ansible docker image" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Netscaler ansible docker image
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-3964c0cb56.js"></script>
+      <script>app.initialize({url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

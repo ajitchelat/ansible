@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    
+    <url>
+     <loc>/</loc>
+     <lastmod>2017-10-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+        
+    <url>
+     <loc>/usage/getting-started/</loc>
+     <lastmod>2017-10-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/usage/speeding-up-execution/</loc>
+     <lastmod>2017-10-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/usage/rolling-upgrades/</loc>
+     <lastmod>2017-10-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/usage/rolling-upgrades-vpx/</loc>
+     <lastmod>2017-10-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/usage/docker-image/</loc>
+     <lastmod>2017-10-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/generic-modules/about/</loc>
+     <lastmod>2017-10-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/generic-modules/templating-configuration-file/</loc>
+     <lastmod>2017-10-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/generic-modules/nitro-api-calls/</loc>
+     <lastmod>2017-10-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+    <url>
+     <loc>/development-utilities/</loc>
+     <lastmod>2017-10-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+</urlset>
