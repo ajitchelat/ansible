@@ -1,0 +1,26 @@
+site_name: Citrix NetScaler Ansible Docs
+site_description: Documentation for Citrix NetScaler Ansible 0.1
+theme: material
+markdown_extensions:
+  - admonition
+  - codehilite
+  -  toc:
+      anchorlink: true
+
+
+
+
+pages:
+  - NetScaler Ansible Docs: index.md
+  - User Documentation:
+    - Getting Started: usage/getting-started.md
+    - Speeding up execution: usage/speeding-up-execution.md
+    - Rolling upgrades: usage/rolling-upgrades.md
+    - Rolling upgrades (VPX): usage/rolling-upgrades-vpx.md
+    - Netscaler ansible docker image: usage/docker-image.md
+  - Using Generic Ansible Modules:
+    - Using generic Ansible modules: generic-modules/about.md
+    - Templating the configuration file: generic-modules/templating-configuration-file.md
+    - Direct NITRO API calls: generic-modules/nitro-api-calls.md
+  - Developer Documentation: development-utilities.md
+
