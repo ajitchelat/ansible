@@ -5,7 +5,7 @@
 ### NetScaler
 
 * [netscaler\_cs\_action](./netscaler-cs-action-module.md) - Manage content switching actions
-* [netscaler\_cs\_policy](./netscaler-cs-policy.md) - Manage content switching policy
+* [netscaler\_cs\_policy](./netscaler-cs-policy-module.md) - Manage content switching policy
 * [netscaler\_cs\_vserver](./netscaler-cs-vserver-module.md) - Manage content switching vserver
 * [netscaler\_gslb\_service](./netscaler-gslb-service-module.md) - Manage gslb service entities in Netscaler.
 * [netscaler\_gslb\_site](./netscaler-gslb-site-module.md) - Manage gslb site entities in Netscaler.
