@@ -1,0 +1,1002 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for Citrix NetScaler Ansible 0.1">
+      
+      
+      
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.1, mkdocs-material-1.4.1">
+    
+    
+      
+        <title>netscaler_lb_monitor - Citrix NetScaler Ansible Docs</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-76741b64bc.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body>
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="../.." title="Citrix NetScaler Ansible Docs" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Module Documentation
+                </span>
+              
+            
+            netscaler_lb_monitor
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
+    Citrix NetScaler Ansible Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="NetScaler Ansible Docs" class="md-nav__link">
+      NetScaler Ansible Docs
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      User Documentation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        User Documentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../usage/getting-started/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../usage/speeding-up-execution/" title="Speeding up execution" class="md-nav__link">
+      Speeding up execution
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../usage/rolling-upgrades/" title="Rolling upgrades" class="md-nav__link">
+      Rolling upgrades
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../usage/rolling-upgrades-vpx/" title="Rolling upgrades (VPX)" class="md-nav__link">
+      Rolling upgrades (VPX)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../usage/docker-image/" title="Netscaler ansible docker image" class="md-nav__link">
+      Netscaler ansible docker image
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Using Generic Ansible Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Using Generic Ansible Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../generic-modules/about/" title="Using generic Ansible modules" class="md-nav__link">
+      Using generic Ansible modules
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../generic-modules/templating-configuration-file/" title="Templating the configuration file" class="md-nav__link">
+      Templating the configuration file
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../generic-modules/nitro-api-calls/" title="Direct NITRO API calls" class="md-nav__link">
+      Direct NITRO API calls
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Module Documentation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Module Documentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Module index" class="md-nav__link">
+      Module index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../netscaler-cs-action-module/" title="netscaler_cs_action" class="md-nav__link">
+      netscaler_cs_action
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../netscaler-cs-policy-module/" title="netscaler_cs_policy" class="md-nav__link">
+      netscaler_cs_policy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../netscaler-cs-vserver-module/" title="netscaler_cs_vserver" class="md-nav__link">
+      netscaler_cs_vserver
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../netscaler-gslb-service-module/" title="netscaler_gslb_service" class="md-nav__link">
+      netscaler_gslb_service
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../netscaler-gslb-site-module/" title="netscaler_gslb_site" class="md-nav__link">
+      netscaler_gslb_site
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../netscaler-gslb-vserver-module/" title="netscaler_gslb_vserver" class="md-nav__link">
+      netscaler_gslb_vserver
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        netscaler_lb_monitor
+      </label>
+    
+    <a href="./" title="netscaler_lb_monitor" class="md-nav__link md-nav__link--active">
+      netscaler_lb_monitor
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#synopsis" title="Synopsis" class="md-nav__link">
+    Synopsis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements-on-host-that-executes-module" title="Requirements (on host that executes module)" class="md-nav__link">
+    Requirements (on host that executes module)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#options" title="Options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" title="Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#status" title="Status" class="md-nav__link">
+    Status
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#support" title="Support" class="md-nav__link">
+    Support
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../netscaler-lb-vserver-module/" title="netscaler_lb_vserver" class="md-nav__link">
+      netscaler_lb_vserver
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../netscaler-save-config-module/" title="netscaler_save_config" class="md-nav__link">
+      netscaler_save_config
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../netscaler-server-module/" title="netscaler_server" class="md-nav__link">
+      netscaler_server
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../netscaler-service-module/" title="netscaler_service" class="md-nav__link">
+      netscaler_service
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../netscaler-servicegroup-module/" title="netscaler_servicegroup" class="md-nav__link">
+      netscaler_servicegroup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../netscaler-ssl-certkey-module/" title="netscaler_ssl_certkey" class="md-nav__link">
+      netscaler_ssl_certkey
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../development-utilities/" title="Developer Documentation" class="md-nav__link">
+      Developer Documentation
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#synopsis" title="Synopsis" class="md-nav__link">
+    Synopsis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements-on-host-that-executes-module" title="Requirements (on host that executes module)" class="md-nav__link">
+    Requirements (on host that executes module)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#options" title="Options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" title="Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#status" title="Status" class="md-nav__link">
+    Status
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#support" title="Support" class="md-nav__link">
+    Support
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="netscaler95gslb95vserver-configure-gslb-vserver-entities-in-netscaler"><a class="toclink" href="#netscaler95gslb95vserver-configure-gslb-vserver-entities-in-netscaler">netscaler_gslb_vserver - Configure gslb vserver entities in Netscaler</a></h1>
+<h2 id="synopsis"><a class="toclink" href="#synopsis">Synopsis</a></h2>
+<ul>
+<li>Configure gslb vserver entities in Netscaler.</li>
+</ul>
+<h2 id="requirements-on-host-that-executes-module"><a class="toclink" href="#requirements-on-host-that-executes-module">Requirements (on host that executes module)</a></h2>
+<ul>
+<li>nitro python sdk</li>
+</ul>
+<h2 id="options"><a class="toclink" href="#options">Options</a></h2>
+<table border=1 cellpadding=4>
+<tr>
+<th class="head">parameter</th>
+<th class="head">required</th>
+<th class="head">default</th>
+<th class="head">choices</th>
+<th class="head">comments</th>
+</tr>
+            <tr><td>appflowlog<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td>
+    <td><ul><li>ENABLED</li><li>DISABLED</li></ul></td>
+    <td><div>Enable logging appflow flow information.</div>        </td></tr>
+            <tr><td>backuplbmethod<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td>
+    <td><ul><li>ROUNDROBIN</li><li>LEASTCONNECTION</li><li>LEASTRESPONSETIME</li><li>SOURCEIPHASH</li><li>LEASTBANDWIDTH</li><li>LEASTPACKETS</li><li>STATICPROXIMITY</li><li>RTT</li><li>CUSTOMLOAD</li></ul></td>
+    <td><div>Backup load balancing method. Becomes operational if the primary load balancing method fails or cannot be used. Valid only if the primary method is based on either round-trip time (RTT) or static proximity.</div>        </td></tr>
+            <tr><td>comment<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td>
+    <td></td>
+    <td><div>Any comments that you might want to associate with the GSLB virtual server.</div>        </td></tr>
+            <tr><td>considereffectivestate<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td>
+    <td><ul><li>NONE</li><li>STATE_ONLY</li></ul></td>
+    <td><div>If the primary state of all bound GSLB services is DOWN, consider the effective states of all the GSLB services, obtained through the Metrics Exchange Protocol (MEP), when determining the state of the GSLB virtual server. To consider the effective state, set the parameter to STATE_ONLY. To disregard the effective state, set the parameter to NONE.</div><div>The effective state of a GSLB service is the ability of the corresponding virtual server to serve traffic. The effective state of the load balancing virtual server, which is transferred to the GSLB service, is UP even if only one virtual server in the backup chain of virtual servers is in the UP state.</div>        </td></tr>
+            <tr><td>disabled<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td>
+    <td><ul><li>yes</li><li>no</li></ul></td>
+    <td><div>When set to <code>yes</code> the GSLB Vserver state will be set to DISABLED.</div><div>When set to <code>no</code> the GSLB Vserver state will be set to ENABLED.</div><div>Note that due to limitations of the underlying NITRO API a <code>disabled</code> state change alone does not cause the module result to report a changed status.</div>        </td></tr>
+            <tr><td>disableprimaryondown<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td>
+    <td><ul><li>ENABLED</li><li>DISABLED</li></ul></td>
+    <td><div>Continue to direct traffic to the backup chain even after the primary GSLB virtual server returns to the UP state. Used when spillover is configured for the virtual server.</div>        </td></tr>
+            <tr><td>dnsrecordtype<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td>
+    <td><ul><li>A</li><li>AAAA</li><li>CNAME</li><li>NAPTR</li></ul></td>
+    <td><div>DNS record type to associate with the GSLB virtual server's domain name.</div><div>Default value: A</div><div>Possible values = A, AAAA, CNAME, NAPTR</div>        </td></tr>
+            <tr><td rowspan="2">domain_bindings<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td><td></td>
+<td> <div>List of bindings for domains for this glsb vserver.</div>    </tr>
+<tr>
+<td colspan="5">
+<table border=1 cellpadding=4>
+<caption><b>Dictionary object domain_bindings</b></caption>
+<tr>
+<th class="head">parameter</th>
+<th class="head">required</th>
+<th class="head">default</th>
+<th class="head">choices</th>
+<th class="head">comments</th>
+</tr>
+                <tr><td>domainname<br/><div style="font-size: small;"></div></td>
+    <td>no</td>
+    <td></td>
+            <td></td>
+            <td><div>Domain name for which to change the time to live (TTL) and/or backup service IP address.</div>        </td></tr>
+                <tr><td>cookietimeout<br/><div style="font-size: small;"></div></td>
+    <td>no</td>
+    <td></td>
+            <td></td>
+            <td><div>Timeout, in minutes, for the GSLB site cookie.</div>        </td></tr>
+                <tr><td>sitedomainttl<br/><div style="font-size: small;"></div></td>
+    <td>no</td>
+    <td></td>
+            <td></td>
+            <td><div>TTL, in seconds, for all internally created site domains (created when a site prefix is configured on a GSLB service) that are associated with this virtual server.</div><div>Minimum value = <code>1</code></div>        </td></tr>
+                <tr><td>ttl<br/><div style="font-size: small;"></div></td>
+    <td>no</td>
+    <td></td>
+            <td></td>
+            <td><div>Time to live (TTL) for the domain.</div>        </td></tr>
+    </table>
+</td>
+</tr>
+    </td></tr>
+            <tr><td>dynamicweight<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td>
+    <td><ul><li>SERVICECOUNT</li><li>SERVICEWEIGHT</li><li>DISABLED</li></ul></td>
+    <td><div>Specify if the appliance should consider the service count, service weights, or ignore both when using weight-based load balancing methods. The state of the number of services bound to the virtual server help the appliance to select the service.</div>        </td></tr>
+            <tr><td>lbmethod<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td>
+    <td><ul><li>ROUNDROBIN</li><li>LEASTCONNECTION</li><li>LEASTRESPONSETIME</li><li>SOURCEIPHASH</li><li>LEASTBANDWIDTH</li><li>LEASTPACKETS</li><li>STATICPROXIMITY</li><li>RTT</li><li>CUSTOMLOAD</li></ul></td>
+    <td><div>Load balancing method for the GSLB virtual server.</div><div>Default value: LEASTCONNECTION</div><div>Possible values = ROUNDROBIN, LEASTCONNECTION, LEASTRESPONSETIME, SOURCEIPHASH, LEASTBANDWIDTH, LEASTPACKETS, STATICPROXIMITY, RTT, CUSTOMLOAD</div>        </td></tr>
+            <tr><td>mir<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td>
+    <td><ul><li>ENABLED</li><li>DISABLED</li></ul></td>
+    <td><div>Include multiple IP addresses in the DNS responses sent to clients.</div>        </td></tr>
+            <tr><td>name<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td>
+    <td></td>
+    <td><div>Name for the GSLB virtual server. Must begin with an ASCII alphanumeric or underscore <code>_</code> character, and must contain only ASCII alphanumeric, underscore <code>_</code>, hash <code>#</code>, period <code>.</code>, space, colon <code>:</code>, at <code>@</code>, equals <code>=</code>, and hyphen <code>-</code> characters. Can be changed after the virtual server is created.</div><div>Minimum length = 1</div>        </td></tr>
+            <tr><td>netmask<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td>
+    <td></td>
+    <td><div>IPv4 network mask for use in the SOURCEIPHASH load balancing method.</div><div>Minimum length = 1</div>        </td></tr>
+            <tr><td>nitro_pass<br/><div style="font-size: small;"></div></td>
+<td>yes</td>
+<td></td>
+    <td></td>
+    <td><div>The password with which to authenticate to the netscaler node.</div>        </td></tr>
+            <tr><td>nitro_protocol<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td>http</td>
+    <td><ul><li>http</li><li>https</li></ul></td>
+    <td><div>Which protocol to use when accessing the nitro API objects.</div>        </td></tr>
+            <tr><td>nitro_timeout<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td>310</td>
+    <td></td>
+    <td><div>Time in seconds until a timeout error is thrown when establishing a new session with Netscaler</div>        </td></tr>
+            <tr><td>nitro_user<br/><div style="font-size: small;"></div></td>
+<td>yes</td>
+<td></td>
+    <td></td>
+    <td><div>The username with which to authenticate to the netscaler node.</div>        </td></tr>
+            <tr><td>nsip<br/><div style="font-size: small;"></div></td>
+<td>yes</td>
+<td></td>
+    <td></td>
+    <td><div>The ip address of the netscaler appliance where the nitro API calls will be made.</div><div>The port can be specified with the colon (:). E.g. 192.168.1.1:555.</div>        </td></tr>
+            <tr><td>persistenceid<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td>
+    <td></td>
+    <td><div>The persistence ID for the GSLB virtual server. The ID is a positive integer that enables GSLB sites to identify the GSLB virtual server, and is required if source IP address based or spill over based persistence is enabled on the virtual server.</div><div>Minimum value = <code>0</code></div><div>Maximum value = <code>65535</code></div>        </td></tr>
+            <tr><td>persistencetype<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td>
+    <td><ul><li>SOURCEIP</li><li>NONE</li></ul></td>
+    <td><div>Use source IP address based persistence for the virtual server.</div><div>After the load balancing method selects a service for the first packet, the IP address received in response to the DNS query is used for subsequent requests from the same client.</div>        </td></tr>
+            <tr><td>persistmask<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td>
+    <td></td>
+    <td><div>The optional IPv4 network mask applied to IPv4 addresses to establish source IP address based persistence.</div><div>Minimum length = 1</div>        </td></tr>
+            <tr><td>save_config<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td>True</td>
+    <td><ul><li>yes</li><li>no</li></ul></td>
+    <td><div>If true the module will save the configuration on the netscaler node if it makes any changes.</div><div>The module will not save the configuration on the netscaler node if it made no changes.</div>        </td></tr>
+            <tr><td rowspan="2">service_bindings<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td><td></td>
+<td> <div>List of bindings for gslb services bound to this gslb virtual server.</div>    </tr>
+<tr>
+<td colspan="5">
+<table border=1 cellpadding=4>
+<caption><b>Dictionary object service_bindings</b></caption>
+<tr>
+<th class="head">parameter</th>
+<th class="head">required</th>
+<th class="head">default</th>
+<th class="head">choices</th>
+<th class="head">comments</th>
+</tr>
+                <tr><td>servicename<br/><div style="font-size: small;"></div></td>
+    <td>no</td>
+    <td></td>
+            <td></td>
+            <td><div>Name of the GSLB service for which to change the weight.</div>        </td></tr>
+                <tr><td>weight<br/><div style="font-size: small;"></div></td>
+    <td>no</td>
+    <td></td>
+            <td></td>
+            <td><div>Weight to assign to the GSLB service.</div>        </td></tr>
+    </table>
+</td>
+</tr>
+    </td></tr>
+            <tr><td>servicetype<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td>
+    <td><ul><li>HTTP</li><li>FTP</li><li>TCP</li><li>UDP</li><li>SSL</li><li>SSL_BRIDGE</li><li>SSL_TCP</li><li>NNTP</li><li>ANY</li><li>SIP_UDP</li><li>SIP_TCP</li><li>SIP_SSL</li><li>RADIUS</li><li>RDP</li><li>RTSP</li><li>MYSQL</li><li>MSSQL</li><li>ORACLE</li></ul></td>
+    <td><div>Protocol used by services bound to the virtual server.</div><div></div>        </td></tr>
+            <tr><td>sobackupaction<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td>
+    <td><ul><li>DROP</li><li>ACCEPT</li><li>REDIRECT</li></ul></td>
+    <td><div>Action to be performed if spillover is to take effect, but no backup chain to spillover is usable or exists.</div>        </td></tr>
+            <tr><td>somethod<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td>
+    <td><ul><li>CONNECTION</li><li>DYNAMICCONNECTION</li><li>BANDWIDTH</li><li>HEALTH</li><li>NONE</li></ul></td>
+    <td><div>Type of threshold that, when exceeded, triggers spillover. Available settings function as follows:</div><div>* <code>CONNECTION</code> - Spillover occurs when the number of client connections exceeds the threshold.</div><div>* <code>DYNAMICCONNECTION</code> - Spillover occurs when the number of client connections at the GSLB virtual server exceeds the sum of the maximum client (Max Clients) settings for bound GSLB services. Do not specify a spillover threshold for this setting, because the threshold is implied by the Max Clients settings of the bound GSLB services.</div><div>* <code>BANDWIDTH</code> - Spillover occurs when the bandwidth consumed by the GSLB virtual server's incoming and outgoing traffic exceeds the threshold.</div><div>* <code>HEALTH</code> - Spillover occurs when the percentage of weights of the GSLB services that are UP drops below the threshold. For example, if services gslbSvc1, gslbSvc2, and gslbSvc3 are bound to a virtual server, with weights 1, 2, and 3, and the spillover threshold is 50%, spillover occurs if gslbSvc1 and gslbSvc3 or gslbSvc2 and gslbSvc3 transition to DOWN.</div><div>* <code>NONE</code> - Spillover does not occur.</div>        </td></tr>
+            <tr><td>sopersistence<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td>
+    <td><ul><li>ENABLED</li><li>DISABLED</li></ul></td>
+    <td><div>If spillover occurs, maintain source IP address based persistence for both primary and backup GSLB virtual servers.</div>        </td></tr>
+            <tr><td>sopersistencetimeout<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td>
+    <td></td>
+    <td><div>Timeout for spillover persistence, in minutes.</div><div>Default value: <code>2</code></div><div>Minimum value = <code>2</code></div><div>Maximum value = <code>1440</code></div>        </td></tr>
+            <tr><td>sothreshold<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td>
+    <td></td>
+    <td><div>Threshold at which spillover occurs. Specify an integer for the CONNECTION spillover method, a bandwidth value in kilobits per second for the BANDWIDTH method (do not enter the units), or a percentage for the HEALTH method (do not enter the percentage symbol).</div><div>Minimum value = <code>1</code></div><div>Maximum value = <code>4294967287</code></div>        </td></tr>
+            <tr><td>state<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td>present</td>
+    <td><ul><li>present</li><li>absent</li></ul></td>
+    <td><div>The state of the resource being configured by the module on the netscaler node.</div><div>When present the resource will be created if needed and configured according to the module's parameters.</div><div>When absent the resource will be deleted from the netscaler node.</div>        </td></tr>
+            <tr><td>timeout<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td>
+    <td></td>
+    <td><div>Idle time, in minutes, after which a persistence entry is cleared.</div><div>Default value: <code>2</code></div><div>Minimum value = <code>2</code></div><div>Maximum value = <code>1440</code></div>        </td></tr>
+            <tr><td>tolerance<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td>
+    <td></td>
+    <td><div>Site selection tolerance, in milliseconds, for implementing the RTT load balancing method. If a site's RTT deviates from the lowest RTT by more than the specified tolerance, the site is not considered when the NetScaler appliance makes a GSLB decision. The appliance implements the round robin method of global server load balancing between sites whose RTT values are within the specified tolerance. If the tolerance is 0 (zero), the appliance always sends clients the IP address of the site with the lowest RTT.</div><div>Minimum value = <code>0</code></div><div>Maximum value = <code>100</code></div>        </td></tr>
+            <tr><td>v6netmasklen<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td>
+    <td></td>
+    <td><div>Number of bits to consider, in an IPv6 source IP address, for creating the hash that is required by the <code>SOURCEIPHASH</code> load balancing method.</div><div>Default value: <code>128</code></div><div>Minimum value = <code>1</code></div><div>Maximum value = <code>128</code></div>        </td></tr>
+            <tr><td>v6persistmasklen<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td>
+    <td></td>
+    <td><div>Number of bits to consider in an IPv6 source IP address when creating source IP address based persistence sessions.</div><div>Default value: <code>128</code></div><div>Minimum value = <code>1</code></div><div>Maximum value = <code>128</code></div>        </td></tr>
+            <tr><td>validate_certs<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td>yes</td>
+    <td></td>
+    <td><div>If <code>no</code>, SSL certificates will not be validated. This should only be used on personally controlled sites using self-signed certificates.</div>        </td></tr>
+    </table>
+
+<p></br></p>
+<h2 id="examples"><a class="toclink" href="#examples">Examples</a></h2>
+<h3 id="status"><a class="toclink" href="#status">Status</a></h3>
+<p>This module is flagged as <strong>preview</strong> which means that it is not
+guaranteed to have a backwards compatible interface.</p>
+<h3 id="support"><a class="toclink" href="#support">Support</a></h3>
+<p>This module is community maintained without core committer oversight.</p>
+<p>For more information on what this means please read modules_support</p>
+<p>For help in developing on modules, should you be so inclined, please
+read community, dev_guide/developing_test_pr and
+dev_guide/developing_modules.</p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../netscaler-gslb-vserver-module/" title="netscaler_gslb_vserver" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                netscaler_gslb_vserver
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../netscaler-lb-vserver-module/" title="netscaler_lb_vserver" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                netscaler_lb_vserver
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-3964c0cb56.js"></script>
+      <script>app.initialize({url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
