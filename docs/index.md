@@ -8,51 +8,49 @@ The main documentation for the modules is organized into several sections listed
 
 ## User Documentation
 
-Getting Started
-Installing Ansible
-Installing Modules
-Playbook
-Speeding up execution
-Saving configuration
-Sample playbook
-Closing remarks
-Rolling upgrades
-Setup
-Testbed
-Upgrade process
-References
-Rolling upgrades (VPX)
-Setup
-Initializing the testbed
-Upgrade process
-References
-Netscaler ansible docker image
-Installation
-Usage
-Example
+* [Getting Started](./usage/getting-started.md)
+  * Installing Ansible
+  * Installing Modules
+  * Playbook
+* [Speeding up execution](./usage/speeding-up-execution.md)
+  * Saving configuration
+  * Sample playbook
+  * Closing remarks
+* [Rolling upgrades](./usage/rolling-upgrades.md)
+  * Setup
+  * Testbed
+  * Upgrade process
+  * References
+* [Rolling upgrades (VPX)](./usage/rolling-upgrades-vpx.md)
+  * Setup
+  * Initializing the testbed
+  * Upgrade process
+  * References
+* [Netscaler ansible docker image](./usage/docker-image.md)
+  * Installation
+  * Usage
+  * Example
 
 ## Using generic ansible modules
 
-Using generic Ansible modules
-References
-Templating the configuration file
-Workflow
-Playbook
-References
-Direct NITRO API calls
-Workflow
-Playbook
-References
+* [Using generic Ansible modules](./generic-modules/about.md)
+  * References
+* [Templating the configuration file](./generic-modules/templating-configuration-file.md)
+  * Workflow
+  * Playbook
+  * References
+* [Direct NITRO API calls](./generic-modules/nitro-api-calls.md)
+  * Workflow
+  * Playbook
+  * References
 
 ## Module Documentation
 
-Module Index
-All Modules
-Network Modules
+* [Module Index](./modules/index.md)
 
 ## Developer Documentation
 
-Development Utilities
-Developing a new module
-Getting the spec of a nitro object
-Generating the boilerplate
+* [Development Utilities](./development-utilities.md)
+  * Developing a new module
+  * Getting the spec of a nitro object
+  * Generating the boilerplate

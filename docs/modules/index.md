@@ -12,6 +12,7 @@
 * [netscaler\_gslb\_vserver](./netscaler-gslb-vserver-module.md) - Configure gslb vserver entities in Netscaler.
 * [netscaler\_lb\_monitor](./netscaler-lb-monitor-module.md) - Manage load balancing monitors
 * [netscaler\_lb\_vserver](./netscaler-lb-vserver-module.md) - Manage load balancing vserver configuration
+* [netscaler\_nitro\_request](./netscaler-nitro-request-module.md) - Issue Nitro API requests to a Netscaler instance.
 * [netscaler\_save\_config](./netscaler-save-config-module.md) - Save Netscaler configuration.
 * [netscaler\_server](./netscaler-server-module.md) - Manage server configuration
 * [netscaler\_service](./netscaler-service-module.md) - Manage service configuration in Netscaler
