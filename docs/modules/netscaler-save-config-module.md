@@ -127,12 +127,12 @@ Common return values are documented [here](http://docs.ansible.com/ansible/lates
 
 
 
-### Status
+## Status
 
 This module is flagged as **preview** which means that it is not guaranteed to have a backwards compatible interface.
 
 
-### Support
+## Support
 
 This module is community maintained without core committer oversight.
 
