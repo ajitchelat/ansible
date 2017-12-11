@@ -1,10 +1,14 @@
-# netscaler\_save\_config - Save Netscaler configuration
+# netscaler\_save\_config - Save Netscaler configuration.
+
+New in Ansible 2.4.0
+
 
 ## Synopsis
 
 * This module uncoditionally saves the configuration on the target netscaler node.
 * This module does not support check mode.
-* This module is intended to run either on the ansible control node or a bastion (jumpserver) with access to the actual netscaler instance.
+* This module is intended to run either on the ansible  control node or a bastion (jumpserver) with access to the actual netscaler instance.
+
 
 ## Requirements (on host that executes module)
 
@@ -20,42 +24,43 @@
 <th class="head">choices</th>
 <th class="head">comments</th>
 </tr>
-            <tr><td>nitro_pass<br/><div style="font-size: small;"></div></td>
+<tr><td>nitro_pass<br/><div style="font-size: small;"></div></td>
 <td>yes</td>
 <td></td>
-    <td></td>
-    <td><div>The password with which to authenticate to the netscaler node.</div>        </td></tr>
-            <tr><td>nitro_protocol<br/><div style="font-size: small;"></div></td>
+<td></td>
+<td><div>The password with which to authenticate to the netscaler node.</div></td></tr>
+<tr><td>nitro_protocol<br/><div style="font-size: small;"></div></td>
 <td>no</td>
 <td>http</td>
-    <td><ul><li>http</li><li>https</li></ul></td>
-    <td><div>Which protocol to use when accessing the nitro API objects.</div>        </td></tr>
-            <tr><td>nitro_timeout<br/><div style="font-size: small;"></div></td>
+<td><ul><li>http</li><li>https</li></ul></td>
+<td><div>Which protocol to use when accessing the nitro API objects.</div></td></tr>
+<tr><td>nitro_timeout<br/><div style="font-size: small;"></div></td>
 <td>no</td>
 <td>310</td>
-    <td></td>
-    <td><div>Time in seconds until a timeout error is thrown when establishing a new session with Netscaler.</div>        </td></tr>
-            <tr><td>nitro_user<br/><div style="font-size: small;"></div></td>
+<td></td>
+<td><div>Time in seconds until a timeout error is thrown when establishing a new session with Netscaler.</div></td></tr>
+<tr><td>nitro_user<br/><div style="font-size: small;"></div></td>
 <td>yes</td>
 <td></td>
-    <td></td>
-    <td><div>The username with which to authenticate to the netscaler node.</div>        </td></tr>
-            <tr><td>nsip<br/><div style="font-size: small;"></div></td>
+<td></td>
+<td><div>The username with which to authenticate to the netscaler node.</div></td></tr>
+<tr><td>nsip<br/><div style="font-size: small;"></div></td>
 <td>yes</td>
 <td></td>
-    <td></td>
-    <td><div>The ip address of the netscaler appliance where the nitro API calls will be made.</div><div>The port can be specified with the colon (:). E.g. <code>192.168.1.1:555</code>.</div>        </td></tr>
-            <tr><td>validate_certs<br/><div style="font-size: small;"></div></td>
+<td></td>
+<td><div>The ip address of the netscaler appliance where the nitro API calls will be made.</div><div>The port can be specified with the colon (:). E.g. <code>192.168.1.1:555</code>.</div></td></tr>
+<tr><td>validate_certs<br/><div style="font-size: small;"></div></td>
 <td>no</td>
 <td>yes</td>
-    <td></td>
-    <td><div>If <code>no</code>, SSL certificates will not be validated. This should only be used on personally controlled sites using self-signed certificates.</div>        </td></tr>
-    </table>
+<td></td>
+<td><div>If <code>no</code>, SSL certificates will not be validated. This should only be used on personally controlled sites using self-signed certificates.</div></td></tr>
+</table>
 </br>
 
 ## Examples
 
-```json
+```
+
 ---
 - name: Save netscaler configuration
   delegate_to: localhost
@@ -87,10 +92,10 @@
     nitro_pass: nsroot
 ```
 
+
 ## Return Values
 
-Common return values are documented here common\_return\_values, the
-following are the fields unique to this module:
+Common return values are documented [here](http://docs.ansible.com/ansible/latest/common_return_values.html) , the following are the fields unique to this module:
 
 <table border=1 cellpadding=4>
 <tr>
@@ -101,14 +106,14 @@ following are the fields unique to this module:
 <th class="head">sample</th>
 </tr>
 
-    <tr>
+<tr>
     <td> msg </td>
     <td> Message detailing the failure reason </td>
     <td align=center> failure </td>
     <td align=center> str </td>
     <td align=center> Action does not exist </td>
 </tr>
-        <tr>
+<tr>
     <td> loglines </td>
     <td> list of logged messages by the module </td>
     <td align=center> always </td>
@@ -119,17 +124,19 @@ following are the fields unique to this module:
 </table>
 </br></br>
 
+
+
+
 ### Status
 
-This module is flagged as **preview** which means that it is not
-guaranteed to have a backwards compatible interface.
+This module is flagged as **preview** which means that it is not guaranteed to have a backwards compatible interface.
+
 
 ### Support
 
 This module is community maintained without core committer oversight.
 
-For more information on what this means please read modules\_support
+For more information on what this means please read :doc:`modules_support`
 
-For help in developing on modules, should you be so inclined, please
-read community, dev\_guide/developing\_test\_pr and
-dev\_guide/developing\_modules.
+
+For help in developing on modules, should you be so inclined, please read [community](http://docs.ansible.com/ansible/latest/community.html) and [developing_modules](http://docs.ansible.com/ansible/latest/dev_guide/developing_modules.html).
