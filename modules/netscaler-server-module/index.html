@@ -498,26 +498,6 @@
     Return Values
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#status" title="Status" class="md-nav__link">
-    Status
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#support" title="Support" class="md-nav__link">
-    Support
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
       
@@ -635,26 +615,6 @@
     Return Values
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#status" title="Status" class="md-nav__link">
-    Status
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#support" title="Support" class="md-nav__link">
-    Support
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
       
@@ -673,10 +633,11 @@
                 
                 
                 <h1 id="netscaler95server-manage-server-configuration"><a class="toclink" href="#netscaler95server-manage-server-configuration">netscaler_server - Manage server configuration</a></h1>
+<p>New in Ansible 2.4.0</p>
 <h2 id="synopsis"><a class="toclink" href="#synopsis">Synopsis</a></h2>
 <ul>
 <li>Manage server entities configuration.</li>
-<li>This module is intended to run either on the ansible control node or a bastion (jumpserver) with access to the actual netscaler instance.</li>
+<li>This module is intended to run either on the ansible  control node or a bastion (jumpserver) with access to the actual netscaler instance.</li>
 </ul>
 <h2 id="requirements-on-host-that-executes-module"><a class="toclink" href="#requirements-on-host-that-executes-module">Requirements (on host that executes module)</a></h2>
 <ul>
@@ -691,117 +652,121 @@
 <th class="head">choices</th>
 <th class="head">comments</th>
 </tr>
-            <tr><td>comment<br/><div style="font-size: small;"></div></td>
+<tr><td>comment<br/><div style="font-size: small;"></div></td>
 <td>no</td>
 <td></td>
-    <td></td>
-    <td><div>Any information about the server.</div>        </td></tr>
-            <tr><td>disabled<br/><div style="font-size: small;"></div></td>
+<td></td>
+<td><div>Any information about the server.</div></td></tr>
+<tr><td>disabled<br/><div style="font-size: small;"></div></td>
 <td>no</td>
 <td></td>
-    <td><ul><li>yes</li><li>no</li></ul></td>
-    <td><div>When set to <code>true</code> the server state will be set to DISABLED.</div><div>When set to <code>false</code> the server state will be set to ENABLED.</div><div>Note that due to limitations of the underlying NITRO API a <code>disabled</code> state change alone does not cause the module result to report a changed status.</div>        </td></tr>
-            <tr><td>domain<br/><div style="font-size: small;"></div></td>
+<td><ul><li>yes</li><li>no</li></ul></td>
+<td><div>When set to <code>true</code> the server state will be set to <code>disabled</code>.</div><div>When set to <code>false</code> the server state will be set to <code>enabled</code>.</div><div>Note that due to limitations of the underlying NITRO API a <code>disabled</code> state change alone does not cause the module result to report a changed status.</div></td></tr>
+<tr><td>domain<br/><div style="font-size: small;"></div></td>
 <td>no</td>
 <td></td>
-    <td></td>
-    <td><div>Domain name of the server. For a domain based configuration, you must create the server first.</div><div>Minimum length = 1</div>        </td></tr>
-            <tr><td>domainresolveretry<br/><div style="font-size: small;"></div></td>
+<td></td>
+<td><div>Domain name of the server. For a domain based configuration, you must create the server first.</div><div>Minimum length = 1</div></td></tr>
+<tr><td>domainresolveretry<br/><div style="font-size: small;"></div></td>
 <td>no</td>
 <td>5</td>
-    <td></td>
-    <td><div>Time, in seconds, for which the NetScaler appliance must wait, after DNS resolution fails, before sending the next DNS query to resolve the domain name.</div><div>Minimum value = <code>5</code></div><div>Maximum value = <code>20939</code></div>        </td></tr>
-            <tr><td>ipaddress<br/><div style="font-size: small;"></div></td>
+<td></td>
+<td><div>Time, in seconds, for which the NetScaler appliance must wait, after DNS resolution fails, before sending the next DNS query to resolve the domain name.</div><div>Minimum value = <code>5</code></div><div>Maximum value = <code>20939</code></div></td></tr>
+<tr><td>graceful<br/><div style="font-size: small;"></div></td>
 <td>no</td>
 <td></td>
-    <td></td>
-    <td><div>IPv4 or IPv6 address of the server. If you create an IP address based server, you can specify the name of the server, instead of its IP address, when creating a service. Note: If you do not create a server entry, the server IP address that you enter when you create a service becomes the name of the server.</div>        </td></tr>
-            <tr><td>ipv6address<br/><div style="font-size: small;"></div></td>
+<td><ul><li>yes</li><li>no</li></ul></td>
+<td><div>Shut down gracefully, without accepting any new connections, and disabling each service when all of its connections are closed.</div><div>Default value: NO</div></td></tr>
+<tr><td>ipaddress<br/><div style="font-size: small;"></div></td>
 <td>no</td>
 <td></td>
-    <td><ul><li>yes</li><li>no</li></ul></td>
-    <td><div>Support IPv6 addressing mode. If you configure a server with the IPv6 addressing mode, you cannot use the server in the IPv4 addressing mode.</div>        </td></tr>
-            <tr><td>name<br/><div style="font-size: small;"></div></td>
+<td></td>
+<td><div>IPv4 or IPv6 address of the server. If you create an IP address based server, you can specify the name of the server, instead of its IP address, when creating a service. Note: If you do not create a server entry, the server IP address that you enter when you create a service becomes the name of the server.</div></td></tr>
+<tr><td>ipv6address<br/><div style="font-size: small;"></div></td>
 <td>no</td>
 <td></td>
-    <td></td>
-    <td><div>Name for the server.</div><div>Must begin with an ASCII alphabetic or underscore <code>_</code> character, and must contain only ASCII alphanumeric, underscore <code>_</code>, hash <code>#</code>, period <code>.</code>, space <code> </code>, colon <code>:</code>, at <code>@</code>, equals <code>=</code>, and hyphen <code>-</code> characters.</div><div>Can be changed after the name is created.</div><div>Minimum length = 1</div>        </td></tr>
-            <tr><td>nitro_pass<br/><div style="font-size: small;"></div></td>
+<td><ul><li>yes</li><li>no</li></ul></td>
+<td><div>Support IPv6 addressing mode. If you configure a server with the IPv6 addressing mode, you cannot use the server in the IPv4 addressing mode.</div></td></tr>
+<tr><td>name<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td>
+<td></td>
+<td><div>Name for the server.</div><div>Must begin with an ASCII alphabetic or underscore <code>_</code> character, and must contain only ASCII alphanumeric, underscore <code>_</code>, hash <code>#</code>, period <code>.</code>, space <code> </code>, colon <code>:</code>, at <code>@</code>, equals <code>=</code>, and hyphen <code>-</code> characters.</div><div>Can be changed after the name is created.</div><div>Minimum length = 1</div></td></tr>
+<tr><td>nitro_pass<br/><div style="font-size: small;"></div></td>
 <td>yes</td>
 <td></td>
-    <td></td>
-    <td><div>The password with which to authenticate to the netscaler node.</div>        </td></tr>
-            <tr><td>nitro_protocol<br/><div style="font-size: small;"></div></td>
+<td></td>
+<td><div>The password with which to authenticate to the netscaler node.</div></td></tr>
+<tr><td>nitro_protocol<br/><div style="font-size: small;"></div></td>
 <td>no</td>
 <td>http</td>
-    <td><ul><li>http</li><li>https</li></ul></td>
-    <td><div>Which protocol to use when accessing the nitro API objects.</div>        </td></tr>
-            <tr><td>nitro_timeout<br/><div style="font-size: small;"></div></td>
+<td><ul><li>http</li><li>https</li></ul></td>
+<td><div>Which protocol to use when accessing the nitro API objects.</div></td></tr>
+<tr><td>nitro_timeout<br/><div style="font-size: small;"></div></td>
 <td>no</td>
 <td>310</td>
-    <td></td>
-    <td><div>Time in seconds until a timeout error is thrown when establishing a new session with Netscaler</div>        </td></tr>
-            <tr><td>nitro_user<br/><div style="font-size: small;"></div></td>
+<td></td>
+<td><div>Time in seconds until a timeout error is thrown when establishing a new session with Netscaler</div></td></tr>
+<tr><td>nitro_user<br/><div style="font-size: small;"></div></td>
 <td>yes</td>
 <td></td>
-    <td></td>
-    <td><div>The username with which to authenticate to the netscaler node.</div>        </td></tr>
-            <tr><td>nsip<br/><div style="font-size: small;"></div></td>
+<td></td>
+<td><div>The username with which to authenticate to the netscaler node.</div></td></tr>
+<tr><td>nsip<br/><div style="font-size: small;"></div></td>
 <td>yes</td>
 <td></td>
-    <td></td>
-    <td><div>The ip address of the netscaler appliance where the nitro API calls will be made.</div><div>The port can be specified with the colon (:). E.g. 192.168.1.1:555.</div>        </td></tr>
-            <tr><td>save_config<br/><div style="font-size: small;"></div></td>
+<td></td>
+<td><div>The ip address of the netscaler appliance where the nitro API calls will be made.</div><div>The port can be specified with the colon (:). E.g. 192.168.1.1:555.</div></td></tr>
+<tr><td>save_config<br/><div style="font-size: small;"></div></td>
 <td>no</td>
 <td>True</td>
-    <td><ul><li>yes</li><li>no</li></ul></td>
-    <td><div>If true the module will save the configuration on the netscaler node if it makes any changes.</div><div>The module will not save the configuration on the netscaler node if it made no changes.</div>        </td></tr>
-            <tr><td>state<br/><div style="font-size: small;"></div></td>
+<td><ul><li>yes</li><li>no</li></ul></td>
+<td><div>If true the module will save the configuration on the netscaler node if it makes any changes.</div><div>The module will not save the configuration on the netscaler node if it made no changes.</div></td></tr>
+<tr><td>state<br/><div style="font-size: small;"></div></td>
 <td>no</td>
 <td>present</td>
-    <td><ul><li>present</li><li>absent</li></ul></td>
-    <td><div>The state of the resource being configured by the module on the netscaler node.</div><div>When present the resource will be created if needed and configured according to the module's parameters.</div><div>When absent the resource will be deleted from the netscaler node.</div>        </td></tr>
-            <tr><td>td<br/><div style="font-size: small;"></div></td>
+<td><ul><li>present</li><li>absent</li></ul></td>
+<td><div>The state of the resource being configured by the module on the netscaler node.</div><div>When present the resource will be created if needed and configured according to the module's parameters.</div><div>When absent the resource will be deleted from the netscaler node.</div></td></tr>
+<tr><td>td<br/><div style="font-size: small;"></div></td>
 <td>no</td>
 <td></td>
-    <td></td>
-    <td><div>Integer value that uniquely identifies the traffic domain in which you want to configure the entity. If you do not specify an ID, the entity becomes part of the default traffic domain, which has an ID of 0.</div><div>Minimum value = <code>0</code></div><div>Maximum value = <code>4094</code></div>        </td></tr>
-            <tr><td>translationip<br/><div style="font-size: small;"></div></td>
+<td></td>
+<td><div>Integer value that uniquely identifies the traffic domain in which you want to configure the entity. If you do not specify an ID, the entity becomes part of the default traffic domain, which has an ID of 0.</div><div>Minimum value = <code>0</code></div><div>Maximum value = <code>4094</code></div></td></tr>
+<tr><td>translationip<br/><div style="font-size: small;"></div></td>
 <td>no</td>
 <td></td>
-    <td></td>
-    <td><div>IP address used to transform the server's DNS-resolved IP address.</div>        </td></tr>
-            <tr><td>translationmask<br/><div style="font-size: small;"></div></td>
+<td></td>
+<td><div>IP address used to transform the server's DNS-resolved IP address.</div></td></tr>
+<tr><td>translationmask<br/><div style="font-size: small;"></div></td>
 <td>no</td>
 <td></td>
-    <td></td>
-    <td><div>The netmask of the translation ip.</div>        </td></tr>
-            <tr><td>validate_certs<br/><div style="font-size: small;"></div></td>
+<td></td>
+<td><div>The netmask of the translation ip.</div></td></tr>
+<tr><td>validate_certs<br/><div style="font-size: small;"></div></td>
 <td>no</td>
 <td>yes</td>
-    <td></td>
-    <td><div>If <code>no</code>, SSL certificates will not be validated. This should only be used on personally controlled sites using self-signed certificates.</div>        </td></tr>
-    </table>
+<td></td>
+<td><div>If <code>no</code>, SSL certificates will not be validated. This should only be used on personally controlled sites using self-signed certificates.</div></td></tr>
+</table>
 
 <p></br></p>
 <h2 id="examples"><a class="toclink" href="#examples">Examples</a></h2>
-<div class="codehilite"><pre><span></span><span class="err">-</span> <span class="err">name:</span> <span class="err">Setup</span> <span class="err">server</span>
-  <span class="err">delegate_to:</span> <span class="err">localhost</span>
-  <span class="err">netscaler_server:</span>
-      <span class="err">nsip:</span> <span class="mf">172.18</span><span class="err">.</span><span class="mf">0.2</span>
-      <span class="err">nitro_user:</span> <span class="err">nsroot</span>
-      <span class="err">nitro_pass:</span> <span class="err">nsroot</span>
+<div class="codehilite"><pre><span></span>- name: Setup server
+  delegate_to: localhost
+  netscaler_server:
+      nsip: 172.18.0.2
+      nitro_user: nsroot
+      nitro_pass: nsroot
 
-      <span class="err">state:</span> <span class="err">present</span>
+      state: present
 
-      <span class="err">name:</span> <span class="err">server</span><span class="mi">-1</span>
-      <span class="err">ipaddress:</span> <span class="mf">192.168</span><span class="err">.</span><span class="mf">1.1</span>
+      name: server-1
+      ipaddress: 192.168.1.1
 </pre></div>
 
 
 <h2 id="return-values"><a class="toclink" href="#return-values">Return Values</a></h2>
-<p>Common return values are documented here common_return_values, the
-following are the fields unique to this module:</p>
+<p>Common return values are documented <a href="http://docs.ansible.com/ansible/latest/common_return_values.html">here</a> , the following are the fields unique to this module:</p>
 <table border=1 cellpadding=4>
 <tr>
 <th class="head">name</th>
@@ -811,21 +776,21 @@ following are the fields unique to this module:</p>
 <th class="head">sample</th>
 </tr>
 
-    <tr>
+<tr>
     <td> msg </td>
     <td> Message detailing the failure reason </td>
     <td align=center> failure </td>
     <td align=center> str </td>
     <td align=center> Action does not exist </td>
 </tr>
-        <tr>
+<tr>
     <td> diff </td>
     <td> List of differences between the actual configured object and the configuration specified in the module </td>
     <td align=center> failure </td>
     <td align=center> dict </td>
     <td align=center> {'targetlbvserver': 'difference. ours: (str) server1 other: (str) server2'} </td>
 </tr>
-        <tr>
+<tr>
     <td> loglines </td>
     <td> list of logged messages by the module </td>
     <td align=center> always </td>
@@ -836,15 +801,17 @@ following are the fields unique to this module:</p>
 </table>
 
 <p></br></br></p>
+<h1 id="notes"><a class="toclink" href="#notes">Notes</a></h1>
+<div class="codehilite"><pre><span></span>* For more information on using Ansible to manage Citrix NetScaler Network devices see https://www.ansible.com/ansible-netscaler.
+</pre></div>
+
+
 <h3 id="status"><a class="toclink" href="#status">Status</a></h3>
-<p>This module is flagged as <strong>preview</strong> which means that it is not
-guaranteed to have a backwards compatible interface.</p>
+<p>This module is flagged as <strong>preview</strong> which means that it is not guaranteed to have a backwards compatible interface.</p>
 <h3 id="support"><a class="toclink" href="#support">Support</a></h3>
 <p>This module is community maintained without core committer oversight.</p>
-<p>For more information on what this means please read modules_support</p>
-<p>For help in developing on modules, should you be so inclined, please
-read community, dev_guide/developing_test_pr and
-dev_guide/developing_modules.</p>
+<p>For more information on what this means please read :doc:<code>modules_support</code></p>
+<p>For help in developing on modules, should you be so inclined, please read <a href="http://docs.ansible.com/ansible/latest/community.html">community</a> and <a href="http://docs.ansible.com/ansible/latest/dev_guide/developing_modules.html">developing_modules</a>.</p>
                 
                   
                 

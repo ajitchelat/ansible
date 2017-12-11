@@ -672,12 +672,13 @@
               
                 
                 
-                <h1 id="netscaler95save95config-save-netscaler-configuration"><a class="toclink" href="#netscaler95save95config-save-netscaler-configuration">netscaler_save_config - Save Netscaler configuration</a></h1>
+                <h1 id="netscaler95save95config-save-netscaler-configuration"><a class="toclink" href="#netscaler95save95config-save-netscaler-configuration">netscaler_save_config - Save Netscaler configuration.</a></h1>
+<p>New in Ansible 2.4.0</p>
 <h2 id="synopsis"><a class="toclink" href="#synopsis">Synopsis</a></h2>
 <ul>
 <li>This module uncoditionally saves the configuration on the target netscaler node.</li>
 <li>This module does not support check mode.</li>
-<li>This module is intended to run either on the ansible control node or a bastion (jumpserver) with access to the actual netscaler instance.</li>
+<li>This module is intended to run either on the ansible  control node or a bastion (jumpserver) with access to the actual netscaler instance.</li>
 </ul>
 <h2 id="requirements-on-host-that-executes-module"><a class="toclink" href="#requirements-on-host-that-executes-module">Requirements (on host that executes module)</a></h2>
 <ul>
@@ -692,75 +693,74 @@
 <th class="head">choices</th>
 <th class="head">comments</th>
 </tr>
-            <tr><td>nitro_pass<br/><div style="font-size: small;"></div></td>
+<tr><td>nitro_pass<br/><div style="font-size: small;"></div></td>
 <td>yes</td>
 <td></td>
-    <td></td>
-    <td><div>The password with which to authenticate to the netscaler node.</div>        </td></tr>
-            <tr><td>nitro_protocol<br/><div style="font-size: small;"></div></td>
+<td></td>
+<td><div>The password with which to authenticate to the netscaler node.</div></td></tr>
+<tr><td>nitro_protocol<br/><div style="font-size: small;"></div></td>
 <td>no</td>
 <td>http</td>
-    <td><ul><li>http</li><li>https</li></ul></td>
-    <td><div>Which protocol to use when accessing the nitro API objects.</div>        </td></tr>
-            <tr><td>nitro_timeout<br/><div style="font-size: small;"></div></td>
+<td><ul><li>http</li><li>https</li></ul></td>
+<td><div>Which protocol to use when accessing the nitro API objects.</div></td></tr>
+<tr><td>nitro_timeout<br/><div style="font-size: small;"></div></td>
 <td>no</td>
 <td>310</td>
-    <td></td>
-    <td><div>Time in seconds until a timeout error is thrown when establishing a new session with Netscaler.</div>        </td></tr>
-            <tr><td>nitro_user<br/><div style="font-size: small;"></div></td>
+<td></td>
+<td><div>Time in seconds until a timeout error is thrown when establishing a new session with Netscaler.</div></td></tr>
+<tr><td>nitro_user<br/><div style="font-size: small;"></div></td>
 <td>yes</td>
 <td></td>
-    <td></td>
-    <td><div>The username with which to authenticate to the netscaler node.</div>        </td></tr>
-            <tr><td>nsip<br/><div style="font-size: small;"></div></td>
+<td></td>
+<td><div>The username with which to authenticate to the netscaler node.</div></td></tr>
+<tr><td>nsip<br/><div style="font-size: small;"></div></td>
 <td>yes</td>
 <td></td>
-    <td></td>
-    <td><div>The ip address of the netscaler appliance where the nitro API calls will be made.</div><div>The port can be specified with the colon (:). E.g. <code>192.168.1.1:555</code>.</div>        </td></tr>
-            <tr><td>validate_certs<br/><div style="font-size: small;"></div></td>
+<td></td>
+<td><div>The ip address of the netscaler appliance where the nitro API calls will be made.</div><div>The port can be specified with the colon (:). E.g. <code>192.168.1.1:555</code>.</div></td></tr>
+<tr><td>validate_certs<br/><div style="font-size: small;"></div></td>
 <td>no</td>
 <td>yes</td>
-    <td></td>
-    <td><div>If <code>no</code>, SSL certificates will not be validated. This should only be used on personally controlled sites using self-signed certificates.</div>        </td></tr>
-    </table>
+<td></td>
+<td><div>If <code>no</code>, SSL certificates will not be validated. This should only be used on personally controlled sites using self-signed certificates.</div></td></tr>
+</table>
 
 <p></br></p>
 <h2 id="examples"><a class="toclink" href="#examples">Examples</a></h2>
-<div class="codehilite"><pre><span></span><span class="err">---</span>
-<span class="err">-</span> <span class="err">name:</span> <span class="err">Save</span> <span class="err">netscaler</span> <span class="err">configuration</span>
-  <span class="err">delegate_to:</span> <span class="err">localhost</span>
-  <span class="err">netscaler_save_config:</span>
-    <span class="err">nsip:</span> <span class="mf">172.18</span><span class="err">.</span><span class="mf">0.2</span>
-    <span class="err">nitro_user:</span> <span class="err">nsroot</span>
-    <span class="err">nitro_pass:</span> <span class="err">nsroot</span>
+<div class="codehilite"><pre><span></span>---
+- name: Save netscaler configuration
+  delegate_to: localhost
+  netscaler_save_config:
+    nsip: 172.18.0.2
+    nitro_user: nsroot
+    nitro_pass: nsroot
 
-<span class="err">-</span> <span class="err">name:</span> <span class="err">Setup</span> <span class="err">server</span> <span class="err">without</span> <span class="err">saving</span>  <span class="err">configuration</span>
-  <span class="err">delegate_to:</span> <span class="err">localhost</span>
-  <span class="err">notify:</span> <span class="err">Save</span> <span class="err">configuration</span>
-  <span class="err">netscaler_server:</span>
-    <span class="err">nsip:</span> <span class="mf">172.18</span><span class="err">.</span><span class="mf">0.2</span>
-    <span class="err">nitro_user:</span> <span class="err">nsroot</span>
-    <span class="err">nitro_pass:</span> <span class="err">nsroot</span>
+- name: Setup server without saving  configuration
+  delegate_to: localhost
+  notify: Save configuration
+  netscaler_server:
+    nsip: 172.18.0.2
+    nitro_user: nsroot
+    nitro_pass: nsroot
 
-    <span class="err">save_config:</span> <span class="err">no</span>
+    save_config: no
 
-    <span class="err">name:</span> <span class="err">server</span><span class="mi">-1</span>
-    <span class="err">ipaddress:</span> <span class="mf">192.168</span><span class="err">.</span><span class="mf">1.1</span>
+    name: server-1
+    ipaddress: 192.168.1.1
 
-<span class="err">#</span> <span class="err">Under</span> <span class="err">playbook&#39;s</span> <span class="err">handlers</span>
+# Under playbook&#39;s handlers
 
-<span class="err">-</span> <span class="err">name:</span> <span class="err">Save</span> <span class="err">configuration</span>
-  <span class="err">delegate_to:</span> <span class="err">localhost</span>
-  <span class="err">netscaler_save_config:</span>
-    <span class="err">nsip:</span> <span class="mf">172.18</span><span class="err">.</span><span class="mf">0.2</span>
-    <span class="err">nitro_user:</span> <span class="err">nsroot</span>
-    <span class="err">nitro_pass:</span> <span class="err">nsroot</span>
+- name: Save configuration
+  delegate_to: localhost
+  netscaler_save_config:
+    nsip: 172.18.0.2
+    nitro_user: nsroot
+    nitro_pass: nsroot
 </pre></div>
 
 
 <h2 id="return-values"><a class="toclink" href="#return-values">Return Values</a></h2>
-<p>Common return values are documented here common_return_values, the
-following are the fields unique to this module:</p>
+<p>Common return values are documented <a href="http://docs.ansible.com/ansible/latest/common_return_values.html">here</a> , the following are the fields unique to this module:</p>
 <table border=1 cellpadding=4>
 <tr>
 <th class="head">name</th>
@@ -770,14 +770,14 @@ following are the fields unique to this module:</p>
 <th class="head">sample</th>
 </tr>
 
-    <tr>
+<tr>
     <td> msg </td>
     <td> Message detailing the failure reason </td>
     <td align=center> failure </td>
     <td align=center> str </td>
     <td align=center> Action does not exist </td>
 </tr>
-        <tr>
+<tr>
     <td> loglines </td>
     <td> list of logged messages by the module </td>
     <td align=center> always </td>
@@ -789,14 +789,11 @@ following are the fields unique to this module:</p>
 
 <p></br></br></p>
 <h3 id="status"><a class="toclink" href="#status">Status</a></h3>
-<p>This module is flagged as <strong>preview</strong> which means that it is not
-guaranteed to have a backwards compatible interface.</p>
+<p>This module is flagged as <strong>preview</strong> which means that it is not guaranteed to have a backwards compatible interface.</p>
 <h3 id="support"><a class="toclink" href="#support">Support</a></h3>
 <p>This module is community maintained without core committer oversight.</p>
-<p>For more information on what this means please read modules_support</p>
-<p>For help in developing on modules, should you be so inclined, please
-read community, dev_guide/developing_test_pr and
-dev_guide/developing_modules.</p>
+<p>For more information on what this means please read :doc:<code>modules_support</code></p>
+<p>For help in developing on modules, should you be so inclined, please read <a href="http://docs.ansible.com/ansible/latest/community.html">community</a> and <a href="http://docs.ansible.com/ansible/latest/dev_guide/developing_modules.html">developing_modules</a>.</p>
                 
                   
                 
