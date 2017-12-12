@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Netscaler Ansible Docs\n\n\nThis project implements a set of Ansible modules for the Citrix Netscaler. Users of these modules can create, edit, update, and delete configuration objects on a Netscaler. For more information on the basic principals that the modules use, see the usage/index.\n\n\nThe code is licensed under the GPL and the authoritative repository is on github\n\n\nThe main documentation for the modules is organized into several sections listed below.\n\n\nUser Documentation\n\n\n\n\nGetting Started\n\n\nInstalling Ansible\n\n\nInstalling Modules\n\n\nPlaybook\n\n\nSpeeding up execution\n\n\nSaving configuration\n\n\nSample playbook\n\n\nClosing remarks\n\n\nRolling upgrades\n\n\nSetup\n\n\nTestbed\n\n\nUpgrade process\n\n\nReferences\n\n\nRolling upgrades (VPX)\n\n\nSetup\n\n\nInitializing the testbed\n\n\nUpgrade process\n\n\nReferences\n\n\nNetscaler ansible docker image\n\n\nInstallation\n\n\nUsage\n\n\nExample\n\n\n\n\nUsing generic ansible modules\n\n\n\n\nUsing generic Ansible modules\n\n\nReferences\n\n\nTemplating the configuration file\n\n\nWorkflow\n\n\nPlaybook\n\n\nReferences\n\n\nDirect NITRO API calls\n\n\nWorkflow\n\n\nPlaybook\n\n\nReferences\n\n\n\n\nModule Documentation\n\n\n\n\nModule Index\n\n\n\n\nDeveloper Documentation\n\n\n\n\nDevelopment Utilities\n\n\nDeveloping a new module\n\n\nGetting the spec of a nitro object\n\n\nGenerating the boilerplate", 
+            "text": "Netscaler Ansible Docs\n\n\nThis project implements a set of Ansible modules for the Citrix Netscaler. Users of these modules can create, edit, update, and delete configuration objects on a Netscaler. For more information on the basic principals that the modules use, see the usage/index.\n\n\nThe code is licensed under the GPL and the authoritative repository is on github\n\n\nThe main documentation for the modules is organized into several sections listed below.\n\n\nUser Documentation\n\n\n\n\nGetting Started\n\n\nInstalling Ansible\n\n\nInstalling Modules\n\n\nPlaybook\n\n\n\n\n\n\nSpeeding up execution\n\n\nSaving configuration\n\n\nSample playbook\n\n\nClosing remarks\n\n\n\n\n\n\nRolling upgrades\n\n\nSetup\n\n\nTestbed\n\n\nUpgrade process\n\n\nReferences\n\n\n\n\n\n\nRolling upgrades (VPX)\n\n\nSetup\n\n\nInitializing the testbed\n\n\nUpgrade process\n\n\nReferences\n\n\n\n\n\n\nNetscaler ansible docker image\n\n\nInstallation\n\n\nUsage\n\n\nExample\n\n\n\n\n\n\n\n\nUsing generic ansible modules\n\n\n\n\nUsing generic Ansible modules\n\n\nReferences\n\n\n\n\n\n\nTemplating the configuration file\n\n\nWorkflow\n\n\nPlaybook\n\n\nReferences\n\n\n\n\n\n\nDirect NITRO API calls\n\n\nWorkflow\n\n\nPlaybook\n\n\nReferences\n\n\n\n\n\n\n\n\nModule Documentation\n\n\n\n\nModule Index\n\n\n\n\nDeveloper Documentation\n\n\n\n\nDevelopment Utilities\n\n\nDeveloping a new module\n\n\nGetting the spec of a nitro object\n\n\nGenerating the boilerplate", 
             "title": "NetScaler Ansible Docs"
         }, 
         {
@@ -12,12 +12,12 @@
         }, 
         {
             "location": "/#user-documentation", 
-            "text": "Getting Started  Installing Ansible  Installing Modules  Playbook  Speeding up execution  Saving configuration  Sample playbook  Closing remarks  Rolling upgrades  Setup  Testbed  Upgrade process  References  Rolling upgrades (VPX)  Setup  Initializing the testbed  Upgrade process  References  Netscaler ansible docker image  Installation  Usage  Example", 
+            "text": "Getting Started  Installing Ansible  Installing Modules  Playbook    Speeding up execution  Saving configuration  Sample playbook  Closing remarks    Rolling upgrades  Setup  Testbed  Upgrade process  References    Rolling upgrades (VPX)  Setup  Initializing the testbed  Upgrade process  References    Netscaler ansible docker image  Installation  Usage  Example", 
             "title": "User Documentation"
         }, 
         {
             "location": "/#using-generic-ansible-modules", 
-            "text": "Using generic Ansible modules  References  Templating the configuration file  Workflow  Playbook  References  Direct NITRO API calls  Workflow  Playbook  References", 
+            "text": "Using generic Ansible modules  References    Templating the configuration file  Workflow  Playbook  References    Direct NITRO API calls  Workflow  Playbook  References", 
             "title": "Using generic ansible modules"
         }, 
         {
