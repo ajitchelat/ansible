@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-12-11</lastmod>
+     <lastmod>2017-12-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,31 +13,31 @@
         
     <url>
      <loc>/usage/getting-started/</loc>
-     <lastmod>2017-12-11</lastmod>
+     <lastmod>2017-12-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/usage/speeding-up-execution/</loc>
-     <lastmod>2017-12-11</lastmod>
+     <lastmod>2017-12-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/usage/rolling-upgrades/</loc>
-     <lastmod>2017-12-11</lastmod>
+     <lastmod>2017-12-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/usage/rolling-upgrades-vpx/</loc>
-     <lastmod>2017-12-11</lastmod>
+     <lastmod>2017-12-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/usage/docker-image/</loc>
-     <lastmod>2017-12-11</lastmod>
+     <lastmod>2017-12-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -47,19 +47,19 @@
         
     <url>
      <loc>/generic-modules/about/</loc>
-     <lastmod>2017-12-11</lastmod>
+     <lastmod>2017-12-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/generic-modules/templating-configuration-file/</loc>
-     <lastmod>2017-12-11</lastmod>
+     <lastmod>2017-12-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/generic-modules/nitro-api-calls/</loc>
-     <lastmod>2017-12-11</lastmod>
+     <lastmod>2017-12-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -69,85 +69,85 @@
         
     <url>
      <loc>/modules/</loc>
-     <lastmod>2017-12-11</lastmod>
+     <lastmod>2017-12-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/modules/netscaler-cs-action-module/</loc>
-     <lastmod>2017-12-11</lastmod>
+     <lastmod>2017-12-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/modules/netscaler-cs-policy-module/</loc>
-     <lastmod>2017-12-11</lastmod>
+     <lastmod>2017-12-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/modules/netscaler-cs-vserver-module/</loc>
-     <lastmod>2017-12-11</lastmod>
+     <lastmod>2017-12-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/modules/netscaler-gslb-service-module/</loc>
-     <lastmod>2017-12-11</lastmod>
+     <lastmod>2017-12-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/modules/netscaler-gslb-site-module/</loc>
-     <lastmod>2017-12-11</lastmod>
+     <lastmod>2017-12-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/modules/netscaler-gslb-vserver-module/</loc>
-     <lastmod>2017-12-11</lastmod>
+     <lastmod>2017-12-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/modules/netscaler-lb-monitor-module/</loc>
-     <lastmod>2017-12-11</lastmod>
+     <lastmod>2017-12-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/modules/netscaler-lb-vserver-module/</loc>
-     <lastmod>2017-12-11</lastmod>
+     <lastmod>2017-12-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/modules/netscaler-save-config-module/</loc>
-     <lastmod>2017-12-11</lastmod>
+     <lastmod>2017-12-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/modules/netscaler-server-module/</loc>
-     <lastmod>2017-12-11</lastmod>
+     <lastmod>2017-12-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/modules/netscaler-service-module/</loc>
-     <lastmod>2017-12-11</lastmod>
+     <lastmod>2017-12-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/modules/netscaler-servicegroup-module/</loc>
-     <lastmod>2017-12-11</lastmod>
+     <lastmod>2017-12-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/modules/netscaler-ssl-certkey-module/</loc>
-     <lastmod>2017-12-11</lastmod>
+     <lastmod>2017-12-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -156,7 +156,7 @@
     
     <url>
      <loc>/development-utilities/</loc>
-     <lastmod>2017-12-11</lastmod>
+     <lastmod>2017-12-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
