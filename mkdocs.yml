@@ -32,7 +32,7 @@ pages:
     - netscaler_gslb_vserver: modules/netscaler-gslb-vserver-module.md
     - netscaler_lb_monitor: modules/netscaler-lb-monitor-module.md
     - netscaler_lb_vserver: modules/netscaler-lb-vserver-module.md/
-    - netscaler-nitro-request: modules/netscaler-nitro-request-module.md
+    - netscaler_nitro_request: modules/netscaler-nitro-request-module.md
     - netscaler_save_config: modules/netscaler-save-config-module.md
     - netscaler_server: modules/netscaler-server-module.md
     - netscaler_service: modules/netscaler-service-module.md
