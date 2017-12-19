@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+  <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>netscaler_nitro_request - Citrix NetScaler Ansible Docs</title>
+     
+    <link rel="shortcut icon" href="
+https://www.citrix.com/etc/designs/citrix/icon-favicon.png"> 
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/highlight.css">
+    <link rel="stylesheet" href="../../css/override.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/font-awesome.css" type="text/css" /> 
+    <script>
+      // Current page data
+      var mkdocs_page_name = "netscaler_nitro_request";
+      var mkdocs_page_input_path = "modules/netscaler-nitro-request-module.md";
+      var mkdocs_page_url = "/modules/netscaler-nitro-request-module/";
+
+    </script>
+    
+    <script src="../../js/jquery-2.1.1.min.js"></script>
+    <script src="../../js/modernizr-2.8.3.min.js"></script>
+    <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../js/custom.js"></script>  
+  </head>
+
+  <body class="wy-body-for-nav" role="document">
+
+    <div class="header-top">
+
+        <div class="header-top-left">
+          <a href="http://developer-docs.citrix.com" class="logo-position"><img height="60" src="../../img/citrixlogoblack.png" target="_blank" class="logo-citrix"><span style="color:#000;font-size: 20px;position: relative;top:4px;left:20px;">Developer Documentation</span></a>
+        </div>
+        <div class="header-top-right">
+          <ul>
+
+            <form id="rtd-search-form-alt" class="wy-form" action="../../search.html" method="get">
+             <ul class="header-elements">
+              <li class="list-inline support">
+                <input name="q" id="txtName" type="text" placeholder="Search SDKs" class="searchdocs">
+                <a class="fa fa-search errspan"></a>
+<!---
+              </li>
+             <li> <a href="javascript:void(0);" style="font-size: 22px;position: relative;left: -10px;top: 3px"><i class="fa fa-globe"></i></a></li>
+             </ul>
+             --->
+            </form>
+
+          </ul>
+
+        </div>
+
+    </div>
+    <div class="body">
+      <div class="wy-grid-for-nav">
+
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+          <div class="wy-side-nav-search">
+            <div role="search">
+  <form id ="rtd-search-form-alt" class="wy-form" action="../../search.html" method="get">
+	<i class="fa fa-search"></i>
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+          </div>
+
+          <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+            <ul class="current">
+              
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../..">NetScaler Ansible Docs</a>
+		
+    </li>
+
+			  
+              
+    <li><span style="font-size: 16px;padding-left: 0px;">User Documentation <i class="faexp fa fa-angle-down" aria-hidden="true"></i></span></li>
+    <ul class="subnav" style="margin-left: 0px;padding-left:15px;border-left: 1px solid #b2b2b2;">
+        
+            
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../../usage/getting-started/">Getting Started</a>
+		
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../../usage/speeding-up-execution/">Speeding up execution</a>
+		
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../../usage/rolling-upgrades/">Rolling upgrades</a>
+		
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../../usage/rolling-upgrades-vpx/">Rolling upgrades (VPX)</a>
+		
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../../usage/docker-image/">Netscaler ansible docker image</a>
+		
+    </li>
+
+        
+    </ul>
+
+			  
+              
+    <li><span style="font-size: 16px;padding-left: 0px;">Using Generic Ansible Modules <i class="faexp fa fa-angle-down" aria-hidden="true"></i></span></li>
+    <ul class="subnav" style="margin-left: 0px;padding-left:15px;border-left: 1px solid #b2b2b2;">
+        
+            
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../../generic-modules/about/">Using generic Ansible modules</a>
+		
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../../generic-modules/templating-configuration-file/">Templating the configuration file</a>
+		
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../../generic-modules/nitro-api-calls/">Direct NITRO API calls</a>
+		
+    </li>
+
+        
+    </ul>
+
+			  
+              
+    <li><span style="font-size: 16px;padding-left: 0px;">Module Documentation <i class="faexp fa fa-angle-down" aria-hidden="true"></i></span></li>
+    <ul class="subnav" style="margin-left: 0px;padding-left:15px;border-left: 1px solid #b2b2b2;">
+        
+            
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../">Module index</a>
+		
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../netscaler-cs-action-module/">netscaler_cs_action</a>
+		
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../netscaler-cs-policy-module/">netscaler_cs_policy</a>
+		
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../netscaler-cs-vserver-module/">netscaler_cs_vserver</a>
+		
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../netscaler-gslb-service-module/">netscaler_gslb_service</a>
+		
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../netscaler-gslb-site-module/">netscaler_gslb_site</a>
+		
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../netscaler-gslb-vserver-module/">netscaler_gslb_vserver</a>
+		
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../netscaler-lb-monitor-module/">netscaler_lb_monitor</a>
+		
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../netscaler-lb-vserver-module/">netscaler_lb_vserver</a>
+		
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="toctree-l1-a current" href="./">netscaler_nitro_request</a>
+		
+            <ul style="margin-left: 0px;padding-left:15px;border-left: 1px solid #b2b2b2;">
+            
+                <li class="toctree-l3"><a href="#netscaler95nitro95request-issue-nitro-api-requests-to-a-netscaler-instance" style="padding:0px;position: relative;">&nbsp;netscaler_nitro_request - Issue Nitro API requests to a Netscaler instance.</a></li>
+                
+                    <li><a class="toctree-l4" href="#synopsis" style="padding:0px;position: relative;">Synopsis</a></li>
+                
+                    <li><a class="toctree-l4" href="#options" style="padding:0px;position: relative;">Options</a></li>
+                
+                    <li><a class="toctree-l4" href="#examples" style="padding:0px;position: relative;">Examples</a></li>
+                
+                    <li><a class="toctree-l4" href="#return-values" style="padding:0px;position: relative;">Return Values</a></li>
+                
+                    <li><a class="toctree-l4" href="#status" style="padding:0px;position: relative;">Status</a></li>
+                
+                    <li><a class="toctree-l4" href="#support" style="padding:0px;position: relative;">Support</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../netscaler-save-config-module/">netscaler_save_config</a>
+		
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../netscaler-server-module/">netscaler_server</a>
+		
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../netscaler-service-module/">netscaler_service</a>
+		
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../netscaler-servicegroup-module/">netscaler_servicegroup</a>
+		
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../netscaler-ssl-certkey-module/">netscaler_ssl_certkey</a>
+		
+    </li>
+
+        
+    </ul>
+
+			  
+              
+    <li class="toctree-l1 ">
+        <a class="toctree-l1-a " href="../../development-utilities/">Developer Documentation</a>
+		
+    </li>
+
+			  
+            </ul>
+          </div>
+          &nbsp;
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+           
+          <div class="wy-nav-content">
+            <div class="rst-content">
+              <!-- <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Module Documentation &raquo;</li>
+        
+      
+    
+    <li>netscaler_nitro_request</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div> -->
+              <div role="main">
+                <div class="section">
+                <div class="file-format">
+                 <div class="leftAlign" style="float: left;visibility: hidden;">
+                  </div>
+                  <div class="rightAlign" style="float: right;">
+                      <span>Download full document:</span>
+                      <ul class="file-types">
+                        <li><a style="border: 1px solid #EE3D24;padding: 5px;font-size: 11px;color: #EE3D24;border-radius: 5px;font-weight: 700">PDF</a></li>
+                        <li><a style="border: 1px solid #2A579A;padding: 5px;font-size: 11px;color: #2A579A;border-radius: 5px;font-weight: 700">DOCX</a></li>
+                        <li><a style="border: 1px solid #495164;padding: 5px;font-size: 11px;color: #495164;border-radius: 5px;font-weight: 700">EMAIL</a></li>
+                        <li><a style="border: 1px solid #495164;padding: 5px;font-size: 11px;color: #495164;border-radius: 5px;font-weight: 700">PRINT</a></li>
+                      </ul>
+                  </div>
+                  </div>
+                   <h1 id="netscaler95nitro95request-issue-nitro-api-requests-to-a-netscaler-instance"><a class="toclink" href="#netscaler95nitro95request-issue-nitro-api-requests-to-a-netscaler-instance">netscaler_nitro_request - Issue Nitro API requests to a Netscaler instance.</a></h1>
+<p>New in Ansible 2.5.0</p>
+<h2 id="synopsis"><a class="toclink" href="#synopsis">Synopsis</a></h2>
+<ul>
+<li>Issue Nitro API requests to a Netscaler instance.</li>
+<li>This is intended to be a short hand for using the uri Ansible module to issue the raw HTTP requests directly.</li>
+<li>It provides consistent return values and has no other dependencies apart from the base Ansible runtime environment.</li>
+<li>This module is intended to run either on the Ansible control node or a bastion (jumpserver) with access to the actual Netscaler instance</li>
+</ul>
+<h2 id="options"><a class="toclink" href="#options">Options</a></h2>
+<table border=1 cellpadding=4>
+<tr>
+<th class="head">parameter</th>
+<th class="head">required</th>
+<th class="head">default</th>
+<th class="head">choices</th>
+<th class="head">comments</th>
+</tr>
+<tr><td>action<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td>
+<td></td>
+<td><div>The action to perform when the <em>operation</em> value is set to <code>action</code>.</div><div>Some common values for this parameter are <code>enable</code>, <code>disable</code>, <code>rename</code>.</div></td></tr>
+<tr><td>args<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td>
+<td></td>
+<td><div>A dictionary which defines the key arguments by which we will select the Nitro object to operate on.</div><div>It is required for the following <em>operation</em> values: <code>get_by_args</code>, <code>'delete_by_args'</code>.</div></td></tr>
+<tr><td>attributes<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td>
+<td></td>
+<td><div>The attributes of the Nitro object we are operating on.</div><div>It is required for the following <em>operation</em> values: <code>add</code>, <code>update</code>, <code>action</code>.</div></td></tr>
+<tr><td>expected_nitro_errorcode<br/><div style="font-size: small;"></div></td>
+<td>yes</td>
+<td>[0]</td>
+<td></td>
+<td><div>A list of numeric values that signify that the operation was successful.</div></td></tr>
+<tr><td>filter<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td>
+<td></td>
+<td><div>A dictionary which defines the filter with which to refine the Nitro objects returned by the <code>get_filtered</code> <em>operation</em>.</div></td></tr>
+<tr><td>instance_id<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td>
+<td></td>
+<td><div>The id of the target Netscaler instance when issuing a Nitro request through a MAS proxy.</div></td></tr>
+<tr><td>instance_ip<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td>
+<td></td>
+<td><div>The IP address of the target Netscaler instance when issuing a Nitro request through a MAS proxy.</div></td></tr>
+<tr><td>instance_name<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td>
+<td></td>
+<td><div>The name of the target Netscaler instance when issuing a Nitro request through a MAS proxy.</div></td></tr>
+<tr><td>name<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td>
+<td></td>
+<td><div>The name of the resource we are operating on.</div><div>It is required for the following <em>operation</em> values: <code>update</code>, <code>get</code>, <code>delete</code>.</div></td></tr>
+<tr><td>nitro_auth_token<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td>
+<td></td>
+<td><div>The authentication token provided by the <code>mas_login</code> operation. It is required when issuing Nitro API calls through a MAS proxy.</div></td></tr>
+<tr><td>nitro_pass<br/><div style="font-size: small;"></div></td>
+<td>yes</td>
+<td></td>
+<td></td>
+<td><div>The password with which to authenticate to the Netscaler node.</div></td></tr>
+<tr><td>nitro_protocol<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td>http</td>
+<td><ul><li>http</li><li>https</li></ul></td>
+<td><div>Which protocol to use when accessing the Nitro API objects.</div></td></tr>
+<tr><td>nitro_user<br/><div style="font-size: small;"></div></td>
+<td>yes</td>
+<td></td>
+<td></td>
+<td><div>The username with which to authenticate to the Netscaler node.</div></td></tr>
+<tr><td>nsip<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td>
+<td></td>
+<td><div>The IP address of the Netscaler or MAS instance where the Nitro API calls will be made.</div><div>The port can be specified with the colon <code>:</code>. E.g. <code>192.168.1.1:555</code>.</div></td></tr>
+<tr><td>operation<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td>
+<td><ul><li>add</li><li>update</li><li>get</li><li>get_by_args</li><li>get_filtered</li><li>get_all</li><li>delete</li><li>delete_by_args</li><li>count</li><li>mas_login</li><li>save_config</li><li>action</li></ul></td>
+<td><div>Define the Nitro operation that we want to perform.</div></td></tr>
+<tr><td>resource<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td></td>
+<td></td>
+<td><div>The type of resource we are operating on.</div><div>It is required for all <em>operation</em> values except <code>mas_login</code> and <code>save_config</code>.</div></td></tr>
+<tr><td>validate_certs<br/><div style="font-size: small;"></div></td>
+<td>no</td>
+<td>yes</td>
+<td></td>
+<td><div>If <code>no</code>, SSL certificates will not be validated. This should only be used on personally controlled sites using self-signed certificates.</div></td></tr>
+</table>
+
+<p></br></p>
+<h2 id="examples"><a class="toclink" href="#examples">Examples</a></h2>
+<div class="codehilite"><pre><span></span><span class="x">- name: Add a server</span>
+<span class="x">  delegate_to: localhost</span>
+<span class="x">  netscaler_nitro_request:</span>
+<span class="x">    nsip: &quot;</span><span class="cp">{{</span> <span class="nv">nsip</span> <span class="cp">}}</span><span class="x">&quot;</span>
+<span class="x">    nitro_user: &quot;</span><span class="cp">{{</span> <span class="nv">nitro_user</span> <span class="cp">}}</span><span class="x">&quot;</span>
+<span class="x">    nitro_pass: &quot;</span><span class="cp">{{</span> <span class="nv">nitro_pass</span> <span class="cp">}}</span><span class="x">&quot;</span>
+<span class="x">    operation: add</span>
+<span class="x">    resource: server</span>
+<span class="x">    name: test-server-1</span>
+<span class="x">    attributes:</span>
+<span class="x">      name: test-server-1</span>
+<span class="x">      ipaddress: 192.168.1.1</span>
+
+<span class="x">- name: Update server</span>
+<span class="x">  delegate_to: localhost</span>
+<span class="x">  netscaler_nitro_request:</span>
+<span class="x">    nsip: &quot;</span><span class="cp">{{</span> <span class="nv">nsip</span> <span class="cp">}}</span><span class="x">&quot;</span>
+<span class="x">    nitro_user: &quot;</span><span class="cp">{{</span> <span class="nv">nitro_user</span> <span class="cp">}}</span><span class="x">&quot;</span>
+<span class="x">    nitro_pass: &quot;</span><span class="cp">{{</span> <span class="nv">nitro_pass</span> <span class="cp">}}</span><span class="x">&quot;</span>
+<span class="x">    operation: update</span>
+<span class="x">    resource: server</span>
+<span class="x">    name: test-server-1</span>
+<span class="x">    attributes:</span>
+<span class="x">      name: test-server-1</span>
+<span class="x">      ipaddress: 192.168.1.2</span>
+
+<span class="x">- name: Get server</span>
+<span class="x">  delegate_to: localhost</span>
+<span class="x">  register: result</span>
+<span class="x">  netscaler_nitro_request:</span>
+<span class="x">    nsip: &quot;</span><span class="cp">{{</span> <span class="nv">nsip</span> <span class="cp">}}</span><span class="x">&quot;</span>
+<span class="x">    nitro_user: &quot;</span><span class="cp">{{</span> <span class="nv">nitro_user</span> <span class="cp">}}</span><span class="x">&quot;</span>
+<span class="x">    nitro_pass: &quot;</span><span class="cp">{{</span> <span class="nv">nitro_pass</span> <span class="cp">}}</span><span class="x">&quot;</span>
+<span class="x">    operation: get</span>
+<span class="x">    resource: server</span>
+<span class="x">    name: test-server-1</span>
+
+<span class="x">- name: Delete server</span>
+<span class="x">  delegate_to: localhost</span>
+<span class="x">  register: result</span>
+<span class="x">  netscaler_nitro_request:</span>
+<span class="x">    nsip: &quot;</span><span class="cp">{{</span> <span class="nv">nsip</span> <span class="cp">}}</span><span class="x">&quot;</span>
+<span class="x">    nitro_user: &quot;</span><span class="cp">{{</span> <span class="nv">nitro_user</span> <span class="cp">}}</span><span class="x">&quot;</span>
+<span class="x">    nitro_pass: &quot;</span><span class="cp">{{</span> <span class="nv">nitro_pass</span> <span class="cp">}}</span><span class="x">&quot;</span>
+<span class="x">    operation: delete</span>
+<span class="x">    resource: server</span>
+<span class="x">    name: test-server-1</span>
+
+<span class="x">- name: Rename server</span>
+<span class="x">  delegate_to: localhost</span>
+<span class="x">  netscaler_nitro_request:</span>
+<span class="x">    nsip: &quot;</span><span class="cp">{{</span> <span class="nv">nsip</span> <span class="cp">}}</span><span class="x">&quot;</span>
+<span class="x">    nitro_user: &quot;</span><span class="cp">{{</span> <span class="nv">nitro_user</span> <span class="cp">}}</span><span class="x">&quot;</span>
+<span class="x">    nitro_pass: &quot;</span><span class="cp">{{</span> <span class="nv">nitro_pass</span> <span class="cp">}}</span><span class="x">&quot;</span>
+<span class="x">    operation: action</span>
+<span class="x">    action: rename</span>
+<span class="x">    resource: server</span>
+<span class="x">    attributes:</span>
+<span class="x">      name: test-server-1</span>
+<span class="x">      newname: test-server-2</span>
+
+<span class="x">- name: Get server by args</span>
+<span class="x">  delegate_to: localhost</span>
+<span class="x">  register: result</span>
+<span class="x">  netscaler_nitro_request:</span>
+<span class="x">    nsip: &quot;</span><span class="cp">{{</span> <span class="nv">nsip</span> <span class="cp">}}</span><span class="x">&quot;</span>
+<span class="x">    nitro_user: &quot;</span><span class="cp">{{</span> <span class="nv">nitro_user</span> <span class="cp">}}</span><span class="x">&quot;</span>
+<span class="x">    nitro_pass: &quot;</span><span class="cp">{{</span> <span class="nv">nitro_pass</span> <span class="cp">}}</span><span class="x">&quot;</span>
+<span class="x">    operation: get_by_args</span>
+<span class="x">    resource: server</span>
+<span class="x">    args:</span>
+<span class="x">      name: test-server-1</span>
+
+<span class="x">- name: Get server by filter</span>
+<span class="x">  delegate_to: localhost</span>
+<span class="x">  register: result</span>
+<span class="x">  netscaler_nitro_request:</span>
+<span class="x">    nsip: &quot;</span><span class="cp">{{</span> <span class="nv">nsip</span> <span class="cp">}}</span><span class="x">&quot;</span>
+<span class="x">    nitro_user: &quot;</span><span class="cp">{{</span> <span class="nv">nitro_user</span> <span class="cp">}}</span><span class="x">&quot;</span>
+<span class="x">    nitro_pass: &quot;</span><span class="cp">{{</span> <span class="nv">nitro_pass</span> <span class="cp">}}</span><span class="x">&quot;</span>
+<span class="x">    operation: get_filtered</span>
+<span class="x">    resource: server</span>
+<span class="x">    filter:</span>
+<span class="x">      ipaddress: 192.168.1.2</span>
+
+<span class="x"># Doing a NITRO request through MAS.</span>
+<span class="x"># Requires to have an authentication token from the mas_login and used as the nitro_auth_token parameter</span>
+<span class="x"># Also nsip is the MAS address and the target Netscaler IP must be defined with instance_ip</span>
+<span class="x"># The rest of the task arguments remain the same as when issuing the NITRO request directly to a Netscaler instance.</span>
+
+<span class="x">- name: Do mas login</span>
+<span class="x">  delegate_to: localhost</span>
+<span class="x">  register: login_result</span>
+<span class="x">  netscaler_nitro_request:</span>
+<span class="x">    nsip: &quot;</span><span class="cp">{{</span> <span class="nv">mas_ip</span> <span class="cp">}}</span><span class="x">&quot;</span>
+<span class="x">    nitro_user: &quot;</span><span class="cp">{{</span> <span class="nv">nitro_user</span> <span class="cp">}}</span><span class="x">&quot;</span>
+<span class="x">    nitro_pass: &quot;</span><span class="cp">{{</span> <span class="nv">nitro_pass</span> <span class="cp">}}</span><span class="x">&quot;</span>
+<span class="x">    operation: mas_login</span>
+
+<span class="x">- name: Add resource through MAS proxy</span>
+<span class="x">  delegate_to: localhost</span>
+<span class="x">  netscaler_nitro_request:</span>
+<span class="x">    nsip: &quot;</span><span class="cp">{{</span> <span class="nv">mas_ip</span> <span class="cp">}}</span><span class="x">&quot;</span>
+<span class="x">    nitro_auth_token: &quot;</span><span class="cp">{{</span> <span class="nv">login_result.nitro_auth_token</span> <span class="cp">}}</span><span class="x">&quot;</span>
+<span class="x">    instance_ip: &quot;</span><span class="cp">{{</span> <span class="nv">nsip</span> <span class="cp">}}</span><span class="x">&quot;</span>
+<span class="x">    operation: add</span>
+<span class="x">    resource: server</span>
+<span class="x">    name: test-server-1</span>
+<span class="x">    attributes:</span>
+<span class="x">      name: test-server-1</span>
+<span class="x">      ipaddress: 192.168.1.7</span>
+</pre></div>
+
+
+<h2 id="return-values"><a class="toclink" href="#return-values">Return Values</a></h2>
+<p>Common return values are documented <a href="http://docs.ansible.com/ansible/latest/common_return_values.html">here</a> , the following are the fields unique to this module:</p>
+<table border=1 cellpadding=4>
+<tr>
+<th class="head">name</th>
+<th class="head">description</th>
+<th class="head">returned</th>
+<th class="head">type</th>
+<th class="head">sample</th>
+</tr>
+
+<tr>
+    <td> nitro_severity </td>
+    <td> A string describing the severity of the NITRO operation error or NONE. </td>
+    <td align=center> always </td>
+    <td align=center> string </td>
+    <td align=center> NONE </td>
+</tr>
+<tr>
+    <td> http_response_body </td>
+    <td> A string with the actual HTTP response body content if existent. If there is no HTTP response body it is an empty string. </td>
+    <td align=center> always </td>
+    <td align=center> string </td>
+    <td align=center> { errorcode: 0, message: Done, severity: NONE } </td>
+</tr>
+<tr>
+    <td> http_response_data </td>
+    <td> A dictionary that contains all the HTTP response's data. </td>
+    <td align=center> always </td>
+    <td align=center> dict </td>
+    <td align=center> status: 200 </td>
+</tr>
+<tr>
+    <td> nitro_message </td>
+    <td> A string containing a human readable explanation for the NITRO operation result. </td>
+    <td align=center> always </td>
+    <td align=center> string </td>
+    <td align=center> Success </td>
+</tr>
+<tr>
+    <td> nitro_object </td>
+    <td> The object returned from the NITRO operation. This is applicable to the various get operations which return an object. </td>
+    <td align=center> when applicable </td>
+    <td align=center> list </td>
+    <td align=center> [{'state': 'ENABLED', 'name': 'test-server-1', 'ipv6address': 'NO', 'maxbandwidth': '0', 'sp': 'OFF', 'ipaddress': '192.168.1.8', 'port': 0}] </td>
+</tr>
+<tr>
+    <td> nitro_auth_token </td>
+    <td> The token returned by the C(mas_login) operation when succesful. </td>
+    <td align=center> when applicable </td>
+    <td align=center> string </td>
+    <td align=center> ##E8D7D74DDBD907EE579E8BB8FF4529655F22227C1C82A34BFC93C9539D66 </td>
+</tr>
+<tr>
+    <td> nitro_errorcode </td>
+    <td> A numeric value containing the return code of the NITRO operation. When 0 the operation is succesful. Any non zero value indicates an error. </td>
+    <td align=center> always </td>
+    <td align=center> int </td>
+    <td align=center> 0 </td>
+</tr>
+
+</table>
+
+<p></br></br></p>
+<h2 id="status"><a class="toclink" href="#status">Status</a></h2>
+<p>This module is flagged as <strong>preview</strong> which means that it is not guaranteed to have a backwards compatible interface.</p>
+<h2 id="support"><a class="toclink" href="#support">Support</a></h2>
+<p>This module is community maintained without core committer oversight.</p>
+<p>For more information on what this means please read :doc:<code>modules_support</code></p>
+<p>For help in developing on modules, should you be so inclined, please read <a href="http://docs.ansible.com/ansible/latest/community.html">community</a> and <a href="http://docs.ansible.com/ansible/latest/dev_guide/developing_modules.html">developing_modules</a>.</p> 
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+    </div>
+    <!--<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span class="prev"><a href="../netscaler-lb-vserver-module/"><i class="fa fa-angle-left"></i> Previous</a></span>
+      
+      
+        <span class="next"><a href="../netscaler-save-config-module/">Next <i class="fa fa-angle-right"></i></a></span>
+      
+    </span>
+	<div class="footer-right">
+		<ul class="social-links">
+			<li class="list-inline"><a href="https://twitter.com/citrix"><i class="fa fa-twitter"></i>@citrix</a></li>
+			<li class="list-inline"><a href="mailto:support@citrix.com"><i class="fa fa-envelope-o"></i>support@citrix.com</a></li>
+		</ul>
+		<ul class="inner-pages">
+			<li class="list-inline"><a href="http://citrix.com/about/legal">Privacy and Terms</li>
+		</ul>
+	</div>
+</div>-->
+
+  </body>
+
+</html>
