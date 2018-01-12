@@ -158,6 +158,11 @@ New in Ansible 2.4
 <td></td>
 <td></td>
 <td><div>Use L2 Parameters to identify a connection.</div></td></tr>
+<tr><td>lbvserver<br/><div style="font-size: small;"> (added in 2.5)</div></td>
+<td>no</td>
+<td></td>
+<td></td>
+<td><div>The default Load Balancing virtual server.</div>        </td></tr>
 <tr><td>listenpolicy<br/><div style="font-size: small;"></div></td>
 <td>no</td>
 <td></td>

@@ -28,6 +28,11 @@ New in Ansible 2.4.0
 <td></td>
 <td></td>
 <td><div>Any information about the server.</div></td></tr>
+<tr><td>delay<br/><div style="font-size: small;"> (added in 2.5)</div></td>
+<td>no</td>
+<td></td>
+<td></td>
+<td><div>Time, in seconds, after which all the services configured on the server are disabled.</div><div>This option is meaningful only when setting the <em>disabled</em> option to <code>true</code></div>        </td></tr>
 <tr><td>disabled<br/><div style="font-size: small;"></div></td>
 <td>no</td>
 <td></td>
@@ -48,6 +53,11 @@ New in Ansible 2.4.0
 <td></td>
 <td><ul><li>yes</li><li>no</li></ul></td>
 <td><div>Shut down gracefully, without accepting any new connections, and disabling each service when all of its connections are closed.</div><div>Default value: NO</div></td></tr>
+<tr><td>graceful<br/><div style="font-size: small;"> (added in 2.5)</div></td>
+<td>no</td>
+<td></td>
+<td><ul><li>yes</li><li>no</li></ul></td>
+<td><div>Shut down gracefully, without accepting any new connections, and disabling each service when all of its connections are closed.</div><div>This option is meaningful only when setting the <em>disabled</em> option to <code>true</code></div>        </td></tr>
 <tr><td>ipaddress<br/><div style="font-size: small;"></div></td>
 <td>no</td>
 <td></td>
